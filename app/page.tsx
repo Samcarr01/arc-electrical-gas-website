@@ -70,14 +70,14 @@ export default function HomePage() {
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 bg-yellow-400/20 text-yellow-300 text-sm font-medium px-3 py-1.5 rounded-full mb-6">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-              NAPIT &amp; Gas Safe Registered &#183; 5.0 &#11088; on Google
+              NAPIT &amp; Gas Safe Registered &middot; 5.0 &#11088; on Google
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               Local Electrician &amp; Gas Engineer in{' '}
               <span className="text-yellow-400">Kippax, Garforth</span>{' '}&amp; Surrounding Areas
             </h1>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              ARC Electrical &amp; Gas is a family-run business serving Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford and the surrounding Leeds area. Fully qualified, insured and accredited &#8212; we handle it all safely and professionally.
+              ARC Electrical &amp; Gas is a family-run business serving Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford and the surrounding Leeds area. Fully qualified, insured and accredited &mdash; we handle it all safely and professionally.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:07810413488" className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-8 py-4 rounded-xl transition-colors text-xl shadow-lg">
@@ -88,7 +88,7 @@ export default function HomePage() {
                 Get a Free Quote
               </Link>
             </div>
-            <p className="text-blue-200 text-sm mt-4">Mon&#8211;Fri 8am&#8211;5pm &#183; Fully insured &#183; Certified on completion</p>
+            <p className="text-blue-200 text-sm mt-4">Mon&ndash;Fri 8am&ndash;5pm &middot; Fully insured &middot; Certified on completion</p>
           </div>
         </div>
       </section>
@@ -103,40 +103,58 @@ export default function HomePage() {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">We handle it all safely and professionally.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="bg-navy rounded-xl p-2.5">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">Electrical Services</h3>
-              </div>
-              <div className="space-y-2.5 mb-6">
-                {elServices.map(s => (
-                  <div key={s.name} className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-navy flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                    <div><span className="font-medium text-gray-900 text-sm">{s.name}</span><span className="text-gray-500 text-sm"> &#8212; {s.desc}</span></div>
+            {/* Electrical with lightbulb image */}
+            <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
+              <div className="h-48 bg-navy relative overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/lightbulbs.jpg" alt="Electrical services" className="w-full h-full object-cover opacity-80" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                <div className="absolute inset-0 bg-navy/60 flex items-center justify-center">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-navy rounded-xl p-2.5">
+                      <svg className="w-7 h-7 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">Electrical Services</h3>
                   </div>
-                ))}
+                </div>
               </div>
-              <Link href="/electrical-services" className="inline-flex items-center gap-2 bg-navy hover:bg-navy-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">View All Electrical Services &#8594;</Link>
+              <div className="p-8">
+                <div className="space-y-2.5 mb-6">
+                  {elServices.map(s => (
+                    <div key={s.name} className="flex items-start gap-3">
+                      <svg className="w-4 h-4 text-navy flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      <div><span className="font-medium text-gray-900 text-sm">{s.name}</span><span className="text-gray-500 text-sm"> &mdash; {s.desc}</span></div>
+                    </div>
+                  ))}
+                </div>
+                <Link href="/electrical-services" className="inline-flex items-center gap-2 bg-navy hover:bg-navy-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">View All Electrical Services &rarr;</Link>
+              </div>
             </div>
 
-            <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="bg-yellow-400 rounded-xl p-2.5">
-                  <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" /></svg>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">Gas Services</h3>
-              </div>
-              <div className="space-y-2.5 mb-6">
-                {gasServices.map(s => (
-                  <div key={s.name} className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-yellow-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                    <div><span className="font-medium text-gray-900 text-sm">{s.name}</span><span className="text-gray-500 text-sm"> &#8212; {s.desc}</span></div>
+            {/* Gas with flames image */}
+            <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
+              <div className="h-48 bg-gray-900 relative overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/flames.jpg" alt="Gas services" className="w-full h-full object-cover opacity-80" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
+                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-yellow-400 rounded-xl p-2.5">
+                      <svg className="w-7 h-7 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /></svg>
+                    </div>
+                    <h3 className="text-2xl font-bold text-white">Gas Services</h3>
                   </div>
-                ))}
+                </div>
               </div>
-              <Link href="/gas-services" className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-6 py-3 rounded-lg transition-colors">View All Gas Services &#8594;</Link>
+              <div className="p-8">
+                <div className="space-y-2.5 mb-6">
+                  {gasServices.map(s => (
+                    <div key={s.name} className="flex items-start gap-3">
+                      <svg className="w-4 h-4 text-yellow-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                      <div><span className="font-medium text-gray-900 text-sm">{s.name}</span><span className="text-gray-500 text-sm"> &mdash; {s.desc}</span></div>
+                    </div>
+                  ))}
+                </div>
+                <Link href="/gas-services" className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-6 py-3 rounded-lg transition-colors">View All Gas Services &rarr;</Link>
+              </div>
             </div>
           </div>
         </div>
@@ -167,13 +185,24 @@ export default function HomePage() {
                 ))}
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              {[['20+','Years Experience'],['5.0 ⭐','Google Rating'],['12','Five-Star Reviews'],['4','Trade Accreditations']].map(([stat, label]) => (
-                <div key={label} className="bg-white/10 border border-white/20 rounded-2xl p-6 text-center">
-                  <div className="text-2xl font-bold text-yellow-400 mb-2">{stat}</div>
-                  <div className="text-blue-100 text-sm">{label}</div>
-                </div>
-              ))}
+            {/* Van photo */}
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/van.jpg"
+                  alt="ARC Electrical & Gas van"
+                  className="w-full h-80 object-cover"
+                  onError={(e) => {
+                    const el = e.target as HTMLImageElement
+                    el.style.display = 'none'
+                    if (el.parentElement) el.parentElement.className = 'rounded-2xl bg-white/10 h-80 grid grid-cols-2 gap-4 p-6'
+                  }}
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-gray-900 rounded-xl px-4 py-3 font-bold text-sm shadow-lg">
+                5.0 &#11088; Google &middot; 12 Reviews
+              </div>
             </div>
           </div>
         </div>
@@ -194,7 +223,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="text-center">
-            <Link href="/areas-we-cover" className="inline-flex items-center gap-2 text-navy hover:text-navy-700 font-semibold">View All Areas We Cover &#8594;</Link>
+            <Link href="/areas-we-cover" className="inline-flex items-center gap-2 text-navy hover:text-navy-700 font-semibold">View All Areas We Cover &rarr;</Link>
           </div>
         </div>
       </section>
@@ -207,7 +236,7 @@ export default function HomePage() {
               <span className="text-3xl font-bold text-gray-900">5.0</span>
               <div className="flex gap-0.5">{[1,2,3,4,5].map(i => <svg key={i} className="w-7 h-7 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}</div>
             </div>
-            <p className="text-gray-600 font-medium">12 Google reviews &#183; Our reputation is built on customer recommendations</p>
+            <p className="text-gray-600 font-medium">12 Google reviews &middot; Our reputation is built on customer recommendations</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {reviews.map((r, i) => (

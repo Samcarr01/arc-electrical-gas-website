@@ -11,14 +11,14 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <section className="bg-gray-900 text-white py-16">
+      <section className="bg-navy text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <nav className="flex items-center gap-2 text-sm text-gray-400 mb-5">
+          <nav className="flex items-center gap-2 text-sm text-blue-200 mb-5">
             <Link href="/" className="hover:text-white">Home</Link><span>/</span>
             <span className="text-yellow-400">Contact</span>
           </nav>
           <h1 className="text-4xl font-bold mb-4">Get in Touch</h1>
-          <p className="text-xl text-gray-300 max-w-xl">Call us, email us or use the form below. We aim to respond to all enquiries promptly.</p>
+          <p className="text-xl text-blue-100 max-w-xl">Call us, email us or use the form below. We aim to respond to all enquiries promptly.</p>
         </div>
       </section>
 
@@ -53,8 +53,17 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900 mb-1">Opening Hours</p>
-                    <p className="text-gray-700 font-medium">Monday &#8211; Friday: 8am &#8211; 5pm</p>
+                    <p className="text-gray-700 font-medium">Monday &ndash; Friday: 8am &ndash; 5pm</p>
                     <p className="text-gray-500 text-sm">Please call or message for availability outside these hours.</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="bg-navy/10 rounded-xl p-3 flex-shrink-0">
+                    <svg className="w-6 h-6 text-navy" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" /></svg>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900 mb-1">Facebook</p>
+                    <a href="https://www.facebook.com/arcelectricalandgas" target="_blank" rel="noopener noreferrer" className="text-navy hover:underline text-sm">facebook.com/arcelectricalandgas</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -63,8 +72,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-gray-900 mb-1">Service Area</p>
-                    <p className="text-gray-600">Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, South Milford, Castleford, Fairburn and surrounding Leeds areas</p>
-                    <Link href="/areas-we-cover" className="text-gray-900 text-sm font-medium hover:underline">View all areas &#8594;</Link>
+                    <p className="text-gray-600 text-sm">Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, South Milford, Castleford, Fairburn and surrounding Leeds areas</p>
+                    <Link href="/areas-we-cover" className="text-navy text-sm font-medium hover:underline">View all areas &rarr;</Link>
                   </div>
                 </div>
               </div>
@@ -72,10 +81,10 @@ export default function ContactPage() {
               <div className="mt-8 bg-gray-50 rounded-2xl p-6 border border-gray-100">
                 <h3 className="font-bold text-gray-900 mb-3">Accreditations</h3>
                 <ul className="space-y-1.5 text-sm text-gray-600">
-                  {['NAPIT Approved Domestic & Commercial Installer','Part P Accredited','Gas Safe Registered (Reg. No. 584102)','Worcester Bosch Accredited Installer','Fully Insured &#8212; Genuine Parts &#8212; Certificates on All Work'].map(a => (
+                  {['NAPIT Approved Domestic & Commercial Installer','Part P Accredited','Gas Safe Registered (Reg. No. 584102)','Worcester Bosch Accredited Installer','Fully Insured — Genuine Parts — Certificates on All Work'].map(a => (
                     <li key={a} className="flex items-center gap-2">
                       <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                      <span dangerouslySetInnerHTML={{__html: a}} />
+                      {a}
                     </li>
                   ))}
                 </ul>
