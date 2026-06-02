@@ -2,7 +2,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import Image from 'next/image'
+import { LOGO_DATA_URL } from '@/components/logo'
 
 const nav = [
   { name: 'Home', href: '/' },
@@ -29,13 +29,12 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
 
           <Link href="/" className="flex-shrink-0">
-            <Image
-              src="/logo.png"
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={LOGO_DATA_URL}
               alt="Arc Electrical & Gas (Leeds) Ltd"
-              width={188}
-              height={74}
+              height={50}
               className="h-10 w-auto"
-              priority
             />
           </Link>
 

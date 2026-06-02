@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Image from 'next/image'
+import { LOGO_DATA_URL } from '@/components/logo'
 
 const services = [
   { name: 'Electrical Services', href: '/electrical-services' },
@@ -28,11 +28,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
             <Link href="/" className="inline-block mb-4">
-              <Image
-                src="/logo.png"
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={LOGO_DATA_URL}
                 alt="Arc Electrical & Gas (Leeds) Ltd"
-                width={188}
-                height={74}
+                height={60}
                 className="h-12 w-auto"
               />
             </Link>
