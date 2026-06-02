@@ -95,7 +95,7 @@ export default function HomePage() {
 
       <TrustBadges />
 
-      {/* Services */}
+      {/* Services with images */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
@@ -105,10 +105,10 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Electrical with lightbulb image */}
             <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
-              <div className="h-48 bg-navy relative overflow-hidden">
+              <div className="h-48 relative overflow-hidden bg-navy">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/lightbulbs.jpg" alt="Electrical services" className="w-full h-full object-cover opacity-80" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
-                <div className="absolute inset-0 bg-navy/60 flex items-center justify-center">
+                <img src="/lightbulbs.jpg" alt="Electrical services" className="w-full h-full object-cover opacity-80" />
+                <div className="absolute inset-0 bg-navy/50 flex items-center justify-center">
                   <div className="flex items-center gap-3">
                     <div className="bg-navy rounded-xl p-2.5">
                       <svg className="w-7 h-7 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
@@ -132,10 +132,10 @@ export default function HomePage() {
 
             {/* Gas with flames image */}
             <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
-              <div className="h-48 bg-gray-900 relative overflow-hidden">
+              <div className="h-48 relative overflow-hidden bg-gray-900">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/flames.jpg" alt="Gas services" className="w-full h-full object-cover opacity-80" onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }} />
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+                <img src="/flames.jpg" alt="Gas services" className="w-full h-full object-cover opacity-80" />
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                   <div className="flex items-center gap-3">
                     <div className="bg-yellow-400 rounded-xl p-2.5">
                       <svg className="w-7 h-7 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /></svg>
@@ -160,7 +160,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why choose us */}
+      {/* Why choose us + van photo */}
       <section className="py-20 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -189,16 +189,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/van.jpg"
-                  alt="ARC Electrical & Gas van"
-                  className="w-full h-80 object-cover"
-                  onError={(e) => {
-                    const el = e.target as HTMLImageElement
-                    el.style.display = 'none'
-                    if (el.parentElement) el.parentElement.className = 'rounded-2xl bg-white/10 h-80 grid grid-cols-2 gap-4 p-6'
-                  }}
-                />
+                <img src="/van.jpg" alt="ARC Electrical & Gas van" className="w-full h-80 object-cover" />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-gray-900 rounded-xl px-4 py-3 font-bold text-sm shadow-lg">
                 5.0 &#11088; Google &middot; 12 Reviews
