@@ -20,7 +20,17 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        sans: [
+          '-apple-system',
+          'BlinkMacSystemFont',
+          '"Segoe UI"',
+          'Roboto',
+          'Oxygen',
+          'Ubuntu',
+          'Cantarell',
+          '"Helvetica Neue"',
+          'sans-serif',
+        ],
       },
     },
   },
