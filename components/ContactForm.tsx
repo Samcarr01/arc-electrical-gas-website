@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 
-const services = ['Electrical Fault Finding','EICR Testing','Fuse Board Upgrade','Lighting Installation','Socket Installation','Cooker Installation','Extractor Fan Installation','Electric Shower Installation','Landlord Electrical Certificate','Boiler Service','Boiler Repair','Boiler Installation','Gas Safety Record (CP12)','Gas Fire Service','Other']
+const services = ['Electrical Fault Finding','EICR Testing','Fuse Board Upgrade','Lighting Installation','Socket Installation','Cooker Installation','Extractor Fan Installation','Electric Shower Installation','Landlord Electrical Certificate','Boiler Service','Boiler Repair','Boiler Installation','Gas Safety Record (CP12)','Replacement Radiator / Plumbing','Gas Fire Service','Other']
 
 export default function ContactForm() {
   const [form, setForm] = useState({ name:'', email:'', phone:'', service:'', location:'', message:'' })
@@ -14,7 +14,11 @@ export default function ContactForm() {
     e.preventDefault()
     setStatus('sending')
     try {
-      const res = await fetch('/api/contact', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify(form) })
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
       setStatus(res.ok ? 'success' : 'error')
     } catch { setStatus('error') }
   }
@@ -25,7 +29,7 @@ export default function ContactForm() {
         <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
       </div>
       <h3 className="text-xl font-bold text-gray-900 mb-2">Message Sent!</h3>
-      <p className="text-gray-600">We&apos;ll get back to you as soon as possible. For urgent work, call <a href="tel:07810413488" className="text-orange-600 font-semibold">07810 413488</a>.</p>
+      <p className="text-gray-600">We&apos;ll get back to you as soon as possible. For urgent work, call <a href="tel:07810413488" className="text-yellow-600 font-semibold">07810 413488</a>.</p>
     </div>
   )
 
@@ -69,13 +73,17 @@ export default function ContactForm() {
           className="w-full border border-gray-300 rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-navy resize-none" placeholder="Tell us what you need..." />
       </div>
       {status === 'error' && (
-        <div className="bg-red-50 border border-red-200 rounded-lg px-4 py-3 text-sm text-red-700">Sorry, there was a problem. Please call us on <a href="tel:07810413488" className="font-semibold">07810 413488</a>.</div>
+        <div className="bg-red-50 border border-red-200 rounded-lg px-4 py-3 text-sm text-red-700">
+          Sorry, there was a problem sending your message. Please call <a href="tel:07810413488" className="font-semibold">07810 413488</a> directly.
+        </div>
       )}
       <button type="submit" disabled={status === 'sending'}
-        className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-4 rounded-lg transition-colors text-base disabled:opacity-60">
+        className="w-full bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-6 py-4 rounded-lg transition-colors text-base disabled:opacity-60">
         {status === 'sending' ? 'Sending...' : 'Send Message'}
       </button>
-      <p className="text-xs text-gray-500 text-center">We aim to respond within a few hours. For urgent enquiries, call <a href="tel:07810413488" className="text-navy underline">07810 413488</a>.</p>
+      <p className="text-xs text-gray-500 text-center">
+        We aim to respond within a few hours. For urgent enquiries, call <a href="tel:07810413488" className="text-navy underline">07810 413488</a>.
+      </p>
     </form>
   )
 }

@@ -27,20 +27,26 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <Link href="/" className="inline-block mb-5">
+            <Link href="/" className="inline-block mb-4">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={LOGO_DATA_URL}
-                alt="Arc Electrical & Gas (Leeds) Ltd"
-                height={80}
-                className="h-16 w-auto"
-              />
+              <img src={LOGO_DATA_URL} alt="Arc Electrical & Gas (Leeds) Ltd" height={60} className="h-16 w-auto" />
             </Link>
-            <p className="text-blue-100 text-sm mb-5 leading-relaxed">
-              NAPIT and Gas Safe registered electricians and gas engineers. Serving Kippax, Garforth,
-              Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford, Fairburn and surrounding Leeds areas.
+            <p className="text-blue-100 text-sm mb-4 leading-relaxed">
+              NAPIT and Gas Safe registered electricians and gas engineers. Serving Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford, Fairburn and surrounding Leeds areas.
             </p>
-            <div className="space-y-2.5">
+            {/* Social */}
+            <a
+              href="https://www.facebook.com/arcelectricalandgas"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-blue-200 hover:text-white text-sm transition-colors mb-4"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+              Facebook
+            </a>
+            <div className="space-y-2">
               <a href="tel:07810413488" className="flex items-center gap-2 text-yellow-400 hover:text-yellow-300 font-semibold text-sm transition-colors">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
                 07810 413488
