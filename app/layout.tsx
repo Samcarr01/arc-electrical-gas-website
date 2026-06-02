@@ -1,0 +1,58 @@
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter', display: 'swap' })
+
+export const metadata: Metadata = {
+  title: {
+    default: 'Electrician & Gas Engineer in Kippax, Garforth | ARC Electrical & Gas',
+    template: '%s | ARC Electrical & Gas',
+  },
+  description:
+    'ARC Electrical & Gas — NAPIT & Gas Safe registered electricians and gas engineers serving Kippax, Garforth, Allerton Bywater, Micklefield and surrounding areas. Call 07810 413488.',
+  metadataBase: new URL('https://www.arcelectricalandgas.co.uk'),
+  openGraph: { type: 'website', locale: 'en_GB', siteName: 'ARC Electrical & Gas' },
+  robots: { index: true, follow: true },
+}
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ElectricalContractor',
+  name: 'ARC Electrical & Gas',
+  legalName: 'Arc Electrical And Gas (Leeds) Ltd',
+  description: 'NAPIT and Gas Safe registered electricians and gas engineers serving Kippax, Garforth, Allerton Bywater, Micklefield and surrounding Leeds areas.',
+  url: 'https://www.arcelectricalandgas.co.uk',
+  telephone: ['+447810413488', '+441132866140'],
+  email: 'chris@arcelectricalandgas.co.uk',
+  areaServed: ['Kippax','Garforth','Allerton Bywater','Micklefield','Great Preston','Swillington','Rothwell','Cross Gates','Castleford','Sherburn in Elmet','Leeds'],
+  openingHoursSpecification: [{
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'],
+    opens: '08:00', closes: '18:00',
+  }],
+  hasCredential: [
+    { '@type': 'EducationalOccupationalCredential', name: 'NAPIT Approved Domestic & Commercial Installer' },
+    { '@type': 'EducationalOccupationalCredential', name: 'Part P Accredited' },
+    { '@type': 'EducationalOccupationalCredential', name: 'Gas Safe Registered (584102)' },
+    { '@type': 'EducationalOccupationalCredential', name: 'Worcester Bosch Accredited Installer' },
+  ],
+  identifier: { '@type': 'PropertyValue', name: 'Companies House', value: '10263305' },
+}
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en-GB" className={inter.variable}>
+      <head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      </head>
+      <body className="font-sans">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </body>
+    </html>
+  )
+}
