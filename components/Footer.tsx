@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 
 const services = [
   { name: 'Electrical Services', href: '/electrical-services' },
@@ -20,24 +21,21 @@ const locs = [
   { name: 'Gas Engineer in Micklefield', href: '/gas-engineer-micklefield' },
 ]
 
-function ArcLogoFooter() {
-  return (
-    <svg viewBox="0 0 220 64" xmlns="http://www.w3.org/2000/svg" className="h-10 w-auto mb-4" aria-label="Arc Electrical & Gas (Leeds) Ltd">
-      <polygon points="22,4 12,32 20,32 10,60 30,28 22,28 32,4" fill="#FFD700" />
-      <path d="M34,12 C34,6 40,2 40,2 C40,8 46,10 46,16 C46,22 42,26 40,26 C37,26 34,22 34,16 Z" fill="#3B82F6" />
-      <text x="54" y="26" fontFamily="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" fontWeight="700" fontSize="17" fill="#FFFFFF">Arc Electrical &amp; Gas</text>
-      <text x="54" y="46" fontFamily="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" fontWeight="400" fontSize="13" fill="#9CA3AF">(Leeds) Ltd</text>
-    </svg>
-  )
-}
-
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div>
-            <ArcLogoFooter />
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/logo.png"
+                alt="Arc Electrical & Gas (Leeds) Ltd"
+                width={188}
+                height={74}
+                className="h-12 w-auto"
+              />
+            </Link>
             <p className="text-gray-400 text-sm mb-5 leading-relaxed">
               NAPIT and Gas Safe registered electricians and gas engineers. Serving Kippax, Garforth,
               Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford, Fairburn and surrounding Leeds areas.
@@ -78,10 +76,10 @@ export default function Footer() {
               <li>Arc Electrical And Gas (Leeds) Ltd</li>
               <li>Company No: 10263305</li>
               <li>Gas Safe Reg: 584102</li>
-              <li>Mon&#8211;Fri: 8am &#8211; 5pm</li>
+              <li>Mon&ndash;Fri: 8am &ndash; 5pm</li>
             </ul>
             <div className="mt-5 pt-5 border-t border-white/10">
-              <p className="text-xs text-gray-500 leading-relaxed">NAPIT Approved &#183; Part P Accredited<br/>Gas Safe Registered &#183; Worcester Bosch Accredited</p>
+              <p className="text-xs text-gray-500 leading-relaxed">NAPIT Approved &middot; Part P Accredited<br/>Gas Safe Registered &middot; Worcester Bosch Accredited</p>
             </div>
           </div>
         </div>

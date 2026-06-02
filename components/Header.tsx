@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import Image from 'next/image'
 
 const nav = [
   { name: 'Home', href: '/' },
@@ -18,32 +19,6 @@ const nav = [
   { name: 'Contact', href: '/contact' },
 ]
 
-// SVG logo matching brand: black bg, yellow bolt, blue flame, white text
-function ArcLogo({ className = '' }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 220 64"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      aria-label="Arc Electrical & Gas (Leeds) Ltd"
-    >
-      {/* Yellow lightning bolt */}
-      <polygon
-        points="22,4 12,32 20,32 10,60 30,28 22,28 32,4"
-        fill="#FFD700"
-      />
-      {/* Blue gas flame */}
-      <path
-        d="M34,12 C34,6 40,2 40,2 C40,8 46,10 46,16 C46,22 42,26 40,26 C37,26 34,22 34,16 Z"
-        fill="#3B82F6"
-      />
-      {/* Company name */}
-      <text x="54" y="26" fontFamily="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" fontWeight="700" fontSize="17" fill="#FFFFFF">Arc Electrical &amp; Gas</text>
-      <text x="54" y="46" fontFamily="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" fontWeight="400" fontSize="13" fill="#9CA3AF">(Leeds) Ltd</text>
-    </svg>
-  )
-}
-
 export default function Header() {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
@@ -54,7 +29,14 @@ export default function Header() {
         <div className="flex items-center justify-between h-16 md:h-20">
 
           <Link href="/" className="flex-shrink-0">
-            <ArcLogo className="h-10 w-auto" />
+            <Image
+              src="/logo.png"
+              alt="Arc Electrical & Gas (Leeds) Ltd"
+              width={188}
+              height={74}
+              className="h-10 w-auto"
+              priority
+            />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
