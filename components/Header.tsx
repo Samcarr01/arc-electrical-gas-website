@@ -24,18 +24,13 @@ export default function Header() {
   const pathname = usePathname()
 
   return (
-    <header className="bg-gray-900 sticky top-0 z-50 shadow-lg">
+    <header className="bg-navy sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
 
           <Link href="/" className="flex-shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={LOGO_DATA_URL}
-              alt="Arc Electrical & Gas (Leeds) Ltd"
-              height={50}
-              className="h-10 w-auto"
-            />
+            <img src={LOGO_DATA_URL} alt="Arc Electrical & Gas (Leeds) Ltd" height={50} className="h-10 w-auto" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
@@ -44,7 +39,7 @@ export default function Header() {
                 <Link
                   href={item.href}
                   className={`text-sm font-medium px-3 py-2 rounded-md transition-colors ${
-                    pathname === item.href ? 'text-yellow-400' : 'text-gray-300 hover:text-white hover:bg-white/10'
+                    pathname === item.href ? 'text-yellow-400' : 'text-gray-200 hover:text-white hover:bg-white/10'
                   }`}
                 >
                   {item.name}
@@ -54,7 +49,7 @@ export default function Header() {
                     <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-2">
                       {item.children.map((c) => (
                         <Link key={c.name} href={c.href}
-                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-900 hover:text-white transition-colors">
+                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-navy hover:text-white transition-colors">
                           {c.name}
                         </Link>
                       ))}
@@ -94,7 +89,7 @@ export default function Header() {
                   <div className="pl-4 mt-1 space-y-1">
                     {item.children.map((c) => (
                       <Link key={c.name} href={c.href} onClick={() => setOpen(false)}
-                        className="block text-gray-400 hover:text-white px-3 py-1.5 text-sm transition-colors">
+                        className="block text-gray-300 hover:text-white px-3 py-1.5 text-sm transition-colors">
                         {c.name}
                       </Link>
                     ))}

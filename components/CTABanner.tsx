@@ -5,7 +5,7 @@ interface Props {
   description?: string
   primaryCTA?: { label: string; href: string }
   secondaryCTA?: { label: string; href: string }
-  bg?: 'dark' | 'yellow' | 'light'
+  bg?: 'navy' | 'yellow' | 'light'
 }
 
 export default function CTABanner({
@@ -13,11 +13,11 @@ export default function CTABanner({
   description = "Call us today or send a message and we'll get back to you promptly.",
   primaryCTA = { label: 'Call 07810 413488', href: 'tel:07810413488' },
   secondaryCTA = { label: 'Get a Free Quote', href: '/contact' },
-  bg = 'dark',
+  bg = 'navy',
 }: Props) {
-  const bgClass = bg === 'dark' ? 'bg-gray-900' : bg === 'yellow' ? 'bg-yellow-400' : 'bg-gray-50'
-  const textClass = bg === 'light' ? 'text-gray-900' : bg === 'yellow' ? 'text-gray-900' : 'text-white'
-  const subTextClass = bg === 'light' ? 'text-gray-600' : bg === 'yellow' ? 'text-gray-800' : 'text-gray-300'
+  const bgClass = bg === 'navy' ? 'bg-navy' : bg === 'yellow' ? 'bg-yellow-400' : 'bg-gray-50'
+  const textClass = bg === 'light' ? 'text-gray-900' : 'text-white'
+  const subTextClass = bg === 'light' ? 'text-gray-600' : 'text-blue-100'
 
   return (
     <section className={`${bgClass} py-16`}>
@@ -35,7 +35,7 @@ export default function CTABanner({
               {primaryCTA.label}
             </Link>
           )}
-          <Link href={secondaryCTA.href} className="inline-flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-gray-900 font-semibold px-8 py-4 rounded-xl transition-colors text-lg">
+          <Link href={secondaryCTA.href} className="inline-flex items-center justify-center gap-2 bg-white hover:bg-blue-50 text-navy font-semibold px-8 py-4 rounded-xl transition-colors text-lg">
             {secondaryCTA.label}
           </Link>
         </div>

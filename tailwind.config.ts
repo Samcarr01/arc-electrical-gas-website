@@ -9,18 +9,16 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Brand palette — matched from logo
-        // Background/dark: near-black (logo background colour)
-        // Yellow: lightning bolt accent
-        // Blue: gas flame accent
+        // Exact brand blue sampled from original arcelectricalandgas.co.uk
+        // Digital Colour Meter: R:26 G:62 B:139 => #1A3E8B
         navy: {
-          DEFAULT: '#111827',
-          50: '#F9FAFB',
-          100: '#F3F4F6',
-          600: '#111827',
-          700: '#0D1117',
-          800: '#080C10',
-          900: '#020408',
+          DEFAULT: '#1A3E8B',
+          50: '#EEF2FB',
+          100: '#C8D5F3',
+          600: '#1A3E8B',
+          700: '#153372',
+          800: '#102859',
+          900: '#0B1D40',
         },
       },
       fontFamily: {

@@ -27,16 +27,16 @@ export default function LocationPageTemplate({ town, serviceType, intro, service
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
-      <section className="bg-gray-900 text-white py-20">
+      <section className="bg-navy text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <nav className="flex items-center gap-2 text-sm text-gray-400 mb-5">
+            <nav className="flex items-center gap-2 text-sm text-blue-200 mb-5">
               <Link href="/" className="hover:text-white transition-colors">Home</Link><span>/</span>
               <Link href="/areas-we-cover" className="hover:text-white transition-colors">Areas</Link><span>/</span>
               <span className="text-yellow-400">{town}</span>
             </nav>
             <h1 className="text-4xl md:text-5xl font-bold mb-5">{label} in {town}</h1>
-            <p className="text-xl text-gray-300 mb-8 leading-relaxed">{intro}</p>
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed">{intro}</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:07810413488" className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-8 py-4 rounded-xl transition-colors text-lg">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
@@ -89,15 +89,15 @@ export default function LocationPageTemplate({ town, serviceType, intro, service
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {isEl ? (
               <>
-                <Link href="/electrical-services" className="bg-white rounded-xl border border-gray-200 p-5 hover:border-gray-900 hover:shadow-md transition-all group"><p className="font-semibold text-gray-900 group-hover:text-gray-700 mb-1">Electrical Services &rarr;</p><p className="text-sm text-gray-500">Fault finding, fuse boards, lighting, sockets and more</p></Link>
-                <Link href="/eicr" className="bg-white rounded-xl border border-gray-200 p-5 hover:border-gray-900 hover:shadow-md transition-all group"><p className="font-semibold text-gray-900 group-hover:text-gray-700 mb-1">EICR Testing &rarr;</p><p className="text-sm text-gray-500">Condition reports for homeowners and landlords</p></Link>
-                <Link href="/landlord-certificates" className="bg-white rounded-xl border border-gray-200 p-5 hover:border-gray-900 hover:shadow-md transition-all group"><p className="font-semibold text-gray-900 group-hover:text-gray-700 mb-1">Landlord Certificates &rarr;</p><p className="text-sm text-gray-500">Electrical certificates for rental properties</p></Link>
+                <Link href="/electrical-services" className="bg-white rounded-xl border border-gray-200 p-5 hover:border-navy hover:shadow-md transition-all group"><p className="font-semibold text-gray-900 group-hover:text-navy mb-1">Electrical Services &rarr;</p><p className="text-sm text-gray-500">Fault finding, fuse boards, lighting, sockets and more</p></Link>
+                <Link href="/eicr" className="bg-white rounded-xl border border-gray-200 p-5 hover:border-navy hover:shadow-md transition-all group"><p className="font-semibold text-gray-900 group-hover:text-navy mb-1">EICR Testing &rarr;</p><p className="text-sm text-gray-500">Condition reports for homeowners and landlords</p></Link>
+                <Link href="/landlord-certificates" className="bg-white rounded-xl border border-gray-200 p-5 hover:border-navy hover:shadow-md transition-all group"><p className="font-semibold text-gray-900 group-hover:text-navy mb-1">Landlord Certificates &rarr;</p><p className="text-sm text-gray-500">Electrical certificates for rental properties</p></Link>
               </>
             ) : (
               <>
-                <Link href="/gas-services" className="bg-white rounded-xl border border-gray-200 p-5 hover:border-gray-900 hover:shadow-md transition-all group"><p className="font-semibold text-gray-900 group-hover:text-gray-700 mb-1">Gas Services &rarr;</p><p className="text-sm text-gray-500">Boiler servicing, repairs, installs and gas safety records</p></Link>
-                <Link href="/boiler-servicing" className="bg-white rounded-xl border border-gray-200 p-5 hover:border-gray-900 hover:shadow-md transition-all group"><p className="font-semibold text-gray-900 group-hover:text-gray-700 mb-1">Boiler Servicing &rarr;</p><p className="text-sm text-gray-500">Annual servicing to keep your heating safe and efficient</p></Link>
-                <Link href="/landlord-certificates" className="bg-white rounded-xl border border-gray-200 p-5 hover:border-gray-900 hover:shadow-md transition-all group"><p className="font-semibold text-gray-900 group-hover:text-gray-700 mb-1">Gas Safety Records &rarr;</p><p className="text-sm text-gray-500">CP12 certificates for landlords and letting agents</p></Link>
+                <Link href="/gas-services" className="bg-white rounded-xl border border-gray-200 p-5 hover:border-navy hover:shadow-md transition-all group"><p className="font-semibold text-gray-900 group-hover:text-navy mb-1">Gas Services &rarr;</p><p className="text-sm text-gray-500">Boiler servicing, repairs, installs and gas safety records</p></Link>
+                <Link href="/boiler-servicing" className="bg-white rounded-xl border border-gray-200 p-5 hover:border-navy hover:shadow-md transition-all group"><p className="font-semibold text-gray-900 group-hover:text-navy mb-1">Boiler Servicing &rarr;</p><p className="text-sm text-gray-500">Annual servicing to keep your heating safe and efficient</p></Link>
+                <Link href="/landlord-certificates" className="bg-white rounded-xl border border-gray-200 p-5 hover:border-navy hover:shadow-md transition-all group"><p className="font-semibold text-gray-900 group-hover:text-navy mb-1">Gas Safety Records &rarr;</p><p className="text-sm text-gray-500">CP12 certificates for landlords and letting agents</p></Link>
               </>
             )}
           </div>
@@ -109,7 +109,7 @@ export default function LocationPageTemplate({ town, serviceType, intro, service
           <h2 className="text-2xl font-bold text-gray-900 mb-5">We Also Cover Nearby Areas</h2>
           <div className="flex flex-wrap gap-3">
             {nearbyAreas.map(a => (
-              <Link key={a.name} href={a.href} className="inline-block bg-gray-100 hover:bg-gray-900 hover:text-white text-gray-700 font-medium px-4 py-2 rounded-lg transition-colors text-sm">{a.name}</Link>
+              <Link key={a.name} href={a.href} className="inline-block bg-gray-100 hover:bg-navy hover:text-white text-gray-700 font-medium px-4 py-2 rounded-lg transition-colors text-sm">{a.name}</Link>
             ))}
             <Link href="/areas-we-cover" className="inline-block bg-yellow-50 hover:bg-yellow-400 hover:text-gray-900 text-yellow-700 font-medium px-4 py-2 rounded-lg transition-colors text-sm">View All Areas &rarr;</Link>
           </div>
