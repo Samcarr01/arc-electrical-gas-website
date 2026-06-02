@@ -6,7 +6,8 @@ import FAQSection from '@/components/FAQSection'
 
 export const metadata: Metadata = {
   title: 'Electrician & Gas Engineer in Kippax, Garforth | ARC Electrical & Gas',
-  description: 'ARC Electrical & Gas — trusted local electricians and gas engineers serving Kippax, Garforth, Allerton Bywater, Micklefield and surrounding Leeds areas. NAPIT & Gas Safe registered. Call 07810 413488.',
+  description: 'ARC Electrical & Gas — trusted local electrician and gas engineer serving Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford and surrounding Leeds areas. NAPIT & Gas Safe registered. 5.0 Google rating. Call 07810 413488.',
+  alternates: { canonical: '/' },
 }
 
 const elServices = [
@@ -23,34 +24,53 @@ const elServices = [
 
 const gasServices = [
   { name: 'Boiler Servicing', desc: 'Annual servicing to keep your boiler safe and efficient.' },
-  { name: 'Boiler Repairs', desc: 'Diagnosing and repairing all makes and models.' },
+  { name: 'Boiler Repairs', desc: 'Diagnosing and repairing all makes and models using genuine parts.' },
   { name: 'Boiler Installation', desc: 'New boiler installation by Worcester Bosch accredited engineers.' },
   { name: 'Gas Safety Records', desc: 'CP12 landlord gas safety certificates for rental properties.' },
   { name: 'Gas Fault Finding', desc: 'Identifying and safely repairing gas faults.' },
   { name: 'Gas Fire Servicing', desc: 'Gas fire inspection, servicing and safety checks.' },
+  { name: 'Replacement Radiators & Small Plumbing Repairs', desc: 'Radiator replacements and minor plumbing repairs carried out by our Gas Safe engineers.' },
 ]
 
-const areas = [
+const primaryAreas = [
   { name: 'Kippax', href: '/electrician-kippax' },
   { name: 'Garforth', href: '/electrician-garforth' },
   { name: 'Allerton Bywater', href: '/electrician-allerton-bywater' },
   { name: 'Micklefield', href: '/electrician-micklefield' },
+  { name: 'Sherburn in Elmet', href: '/areas-we-cover' },
+  { name: 'South Milford', href: '/areas-we-cover' },
+  { name: 'Castleford', href: '/areas-we-cover' },
+  { name: 'Fairburn', href: '/areas-we-cover' },
   { name: 'Great Preston', href: '/areas-we-cover' },
   { name: 'Swillington', href: '/areas-we-cover' },
-  { name: 'Rothwell', href: '/areas-we-cover' },
-  { name: 'Cross Gates', href: '/areas-we-cover' },
-  { name: 'Castleford', href: '/areas-we-cover' },
-  { name: 'Sherburn in Elmet', href: '/areas-we-cover' },
 ]
 
+// Real Google reviews — 5.0 stars, 12 reviews
 const reviews = [
-  { text: 'ARC completed our EICR in Kippax and were professional throughout. Quick, tidy and great value. Highly recommended.', author: 'Homeowner, Kippax', stars: 5 },
-  { text: 'Chris carried out the annual boiler service and gas safety record for our rental property in Garforth. Efficient, properly certified and reasonably priced.', author: 'Landlord, Garforth', stars: 5 },
-  { text: 'Had a new consumer unit fitted in Allerton Bywater. Excellent work, completed in one day with full certification. Very happy with the service.', author: 'Homeowner, Allerton Bywater', stars: 5 },
+  {
+    text: 'Fantastic job. Highly recommend ARC electrical & gas. The price quoted was great and we were kept informed at all times. Hit a snag when past work wasn’t up to scratch, Chris put it all right and has left us feeling safe. Will always use Chris, thank you for a great job.',
+    author: 'B Wood',
+    stars: 5,
+  },
+  {
+    text: 'Chris has been maintaining my central heating system for many years. When my boiler started to drip he re-arranged his schedule and came first thing the next morning. The fault was quickly diagnosed and fixed. Outstanding service from a really nice bloke. I can’t recommend him highly enough.',
+    author: 'Jonathan Clay',
+    stars: 5,
+  },
+  {
+    text: 'Chris responded immediately to my query and came at 9 the next morning. Sorted out a dodgy switch quickly and with no fuss, just for his call out charge. Would recommend.',
+    author: 'Kevin Oldershaw',
+    stars: 5,
+  },
+  {
+    text: 'Responded quickly, was very professional and kept us updated throughout. Fitted repair in around our availability. Price was fair. Will definitely use again.',
+    author: 'Dan Norvell',
+    stars: 5,
+  },
 ]
 
 const faqs = [
-  { question: 'What areas do ARC Electrical & Gas cover?', answer: 'We cover Kippax, Garforth, Allerton Bywater, Micklefield, Great Preston, Swillington, Rothwell, Cross Gates, Castleford, Sherburn in Elmet and surrounding areas in the Leeds region.' },
+  { question: 'What areas do ARC Electrical & Gas cover?', answer: 'We cover Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, South Milford, Castleford, Fairburn, Great Preston, Swillington, Rothwell, Cross Gates, Selby and surrounding areas.' },
   { question: 'Are you Gas Safe registered?', answer: 'Yes. We are Gas Safe registered (Reg. No. 584102). By law, all gas work must be carried out by a Gas Safe registered engineer. You can verify our registration at gassaferegister.co.uk.' },
   { question: 'Are you NAPIT approved?', answer: 'Yes. We are NAPIT approved domestic and commercial installers. This means all our electrical work meets UK Building Regulations and we can self-certify electrical installation work under Part P.' },
   { question: 'Do you provide certificates for completed work?', answer: 'Yes. We provide a test certificate for all electrical installation work and an electronic service record or gas safety record on completion of gas work. These can be emailed to you, your letting agent or property manager.' },
@@ -62,23 +82,23 @@ export default function HomePage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative bg-navy overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-800 to-navy opacity-90" />
+      <section className="relative bg-gray-900 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-800 to-gray-950 opacity-90" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-orange-500/20 text-orange-300 text-sm font-medium px-3 py-1.5 rounded-full mb-6">
+            <div className="inline-flex items-center gap-2 bg-yellow-400/20 text-yellow-300 text-sm font-medium px-3 py-1.5 rounded-full mb-6">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-              NAPIT &amp; Gas Safe Registered · 20+ Years Experience
+              NAPIT &amp; Gas Safe Registered &#183; 5.0 &#11088; on Google
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Local Electricians &amp; Gas Engineers in{' '}
-              <span className="text-orange-400">Kippax, Garforth</span>{' '}&amp; Surrounding Areas
+              Local Electrician &amp; Gas Engineer in{' '}
+              <span className="text-yellow-400">Kippax, Garforth</span>{' '}&amp; Surrounding Areas
             </h1>
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-              ARC Electrical &amp; Gas is a family-run business serving Kippax, Garforth, Allerton Bywater, Micklefield and the surrounding Leeds area. Fully qualified, insured and accredited — we do the job right, first time.
+              ARC Electrical &amp; Gas is a family-run business serving Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford and the surrounding Leeds area. Fully qualified, insured and accredited &#8212; we handle it all safely and professionally.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:07810413488" className="inline-flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-4 rounded-xl transition-colors text-xl shadow-lg">
+              <a href="tel:07810413488" className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-8 py-4 rounded-xl transition-colors text-xl shadow-lg">
                 <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
                 07810 413488
               </a>
@@ -86,7 +106,7 @@ export default function HomePage() {
                 Get a Free Quote
               </Link>
             </div>
-            <p className="text-gray-400 text-sm mt-4">Mon–Fri 8am–6pm · Fully insured · Certified on completion</p>
+            <p className="text-gray-400 text-sm mt-4">Mon&#8211;Fri 8am&#8211;5pm &#183; Fully insured &#183; Certified on completion</p>
           </div>
         </div>
       </section>
@@ -98,12 +118,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Electrical &amp; Gas Services</h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">From a blown fuse to a full rewire, boiler service to new installation — we handle it all safely and professionally.</p>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">We handle it all safely and professionally.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Electrical */}
             <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
               <div className="flex items-center gap-3 mb-6">
-                <div className="bg-blue-500 rounded-xl p-2.5">
+                <div className="bg-blue-600 rounded-xl p-2.5">
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900">Electrical Services</h3>
@@ -111,42 +132,43 @@ export default function HomePage() {
               <div className="space-y-2.5 mb-6">
                 {elServices.map(s => (
                   <div key={s.name} className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-blue-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                    <div><span className="font-medium text-gray-900 text-sm">{s.name}</span><span className="text-gray-500 text-sm"> — {s.desc}</span></div>
+                    <svg className="w-4 h-4 text-blue-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                    <div><span className="font-medium text-gray-900 text-sm">{s.name}</span><span className="text-gray-500 text-sm"> &#8212; {s.desc}</span></div>
                   </div>
                 ))}
               </div>
-              <Link href="/electrical-services" className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors">View All Electrical Services →</Link>
+              <Link href="/electrical-services" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">View All Electrical Services &#8594;</Link>
             </div>
 
+            {/* Gas */}
             <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
               <div className="flex items-center gap-3 mb-6">
-                <div className="bg-orange-500 rounded-xl p-2.5">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" /></svg>
+                <div className="bg-yellow-400 rounded-xl p-2.5">
+                  <svg className="w-6 h-6 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" /></svg>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900">Gas Services</h3>
               </div>
               <div className="space-y-2.5 mb-6">
                 {gasServices.map(s => (
                   <div key={s.name} className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-orange-500 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                    <div><span className="font-medium text-gray-900 text-sm">{s.name}</span><span className="text-gray-500 text-sm"> — {s.desc}</span></div>
+                    <svg className="w-4 h-4 text-yellow-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                    <div><span className="font-medium text-gray-900 text-sm">{s.name}</span><span className="text-gray-500 text-sm"> &#8212; {s.desc}</span></div>
                   </div>
                 ))}
               </div>
-              <Link href="/gas-services" className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-3 rounded-lg transition-colors">View All Gas Services →</Link>
+              <Link href="/gas-services" className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-6 py-3 rounded-lg transition-colors">View All Gas Services &#8594;</Link>
             </div>
           </div>
         </div>
       </section>
 
       {/* Why choose us */}
-      <section className="py-20 bg-navy text-white">
+      <section className="py-20 bg-gray-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose ARC Electrical &amp; Gas?</h2>
-              <p className="text-gray-300 text-lg mb-8">We&apos;re a family business, not a large national company. You get direct communication, an honest service and a team that cares about its local reputation.</p>
+              <p className="text-gray-300 text-lg mb-8">We’re a family business, not a large national company. You get direct communication, an honest service and a team that cares about its local reputation.</p>
               <div className="space-y-4">
                 {[
                   ['NAPIT Approved & Part P Accredited', 'All electrical work self-certified under Part P of the Building Regulations.'],
@@ -154,11 +176,11 @@ export default function HomePage() {
                   ['Worcester Bosch Accredited', 'Specialist recognised installer for Worcester Bosch boilers.'],
                   ['Over 20 Years Experience', 'Long track record of quality across the Leeds area.'],
                   ['Fully Insured', 'Complete cover for all electrical and gas installation work.'],
-                  ['Family Run Business', 'Built on customer recommendations — your satisfaction is our reputation.'],
+                  ['Genuine Parts Used', 'We only use genuine parts on every job.'],
                 ].map(([t, d]) => (
                   <div key={t} className="flex items-start gap-4">
-                    <div className="bg-orange-500 rounded-lg p-1.5 flex-shrink-0 mt-0.5">
-                      <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                    <div className="bg-yellow-400 rounded-lg p-1.5 flex-shrink-0 mt-0.5">
+                      <svg className="w-4 h-4 text-gray-900" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
                     </div>
                     <div><p className="font-semibold text-white">{t}</p><p className="text-gray-400 text-sm">{d}</p></div>
                   </div>
@@ -166,9 +188,9 @@ export default function HomePage() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-4">
-              {[['20+','Years Experience'],['100%','Accredited Work'],['4','Trade Accreditations'],['⭐⭐⭐⭐⭐','Customer Rated']].map(([stat, label]) => (
+              {[['20+','Years Experience'],['5.0 ⭐','Google Rating'],['12','Five-Star Reviews'],['4','Trade Accreditations']].map(([stat, label]) => (
                 <div key={label} className="bg-white/5 border border-white/10 rounded-2xl p-6 text-center">
-                  <div className="text-2xl font-bold text-orange-400 mb-2">{stat}</div>
+                  <div className="text-2xl font-bold text-yellow-400 mb-2">{stat}</div>
                   <div className="text-gray-300 text-sm">{label}</div>
                 </div>
               ))}
@@ -182,42 +204,48 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Areas We Cover</h2>
-            <p className="text-lg text-gray-600">Based in the Leeds area, we serve Kippax, Garforth, Allerton Bywater, Micklefield and surrounding towns.</p>
+            <p className="text-lg text-gray-600">Based in the Leeds area, we serve Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford, Fairburn, South Milford and surrounding towns.</p>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 mb-8">
-            {areas.map(a => (
-              <Link key={a.name} href={a.href} className="bg-gray-50 hover:bg-navy hover:text-white text-gray-700 font-medium rounded-xl p-4 text-center transition-all text-sm border border-gray-100 hover:border-navy hover:shadow-md">
+            {primaryAreas.map(a => (
+              <Link key={a.name} href={a.href} className="bg-gray-50 hover:bg-gray-900 hover:text-white text-gray-700 font-medium rounded-xl p-4 text-center transition-all text-sm border border-gray-100 hover:border-gray-900 hover:shadow-md">
                 {a.name}
               </Link>
             ))}
           </div>
           <div className="text-center">
-            <Link href="/areas-we-cover" className="inline-flex items-center gap-2 text-navy hover:text-blue-700 font-semibold">View All Areas We Cover →</Link>
+            <Link href="/areas-we-cover" className="inline-flex items-center gap-2 text-gray-900 hover:text-yellow-600 font-semibold">View All Areas We Cover &#8594;</Link>
           </div>
         </div>
       </section>
 
-      {/* Reviews */}
+      {/* Real Google Reviews */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
-            <p className="text-gray-600">Our reputation is built on customer recommendations.</p>
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <span className="text-3xl font-bold text-gray-900">5.0</span>
+              <div className="flex gap-0.5">{[1,2,3,4,5].map(i => <svg key={i} className="w-7 h-7 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>)}</div>
+            </div>
+            <p className="text-gray-600 font-medium">12 Google reviews &#183; Our reputation is built on customer recommendations</p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {reviews.map((r, i) => (
-              <div key={i} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm">
+              <div key={i} className="bg-white rounded-2xl p-6 border border-gray-100 shadow-sm flex flex-col">
                 <div className="flex gap-0.5 mb-3">
                   {Array.from({length: r.stars}).map((_, j) => (
-                    <svg key={j} className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                    <svg key={j} className="w-4 h-4 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
                   ))}
                 </div>
-                <p className="text-gray-700 text-sm italic mb-4">&ldquo;{r.text}&rdquo;</p>
-                <p className="text-sm font-semibold text-gray-900">{r.author}</p>
+                <p className="text-gray-700 text-sm italic mb-4 flex-1">&ldquo;{r.text}&rdquo;</p>
+                <div className="flex items-center gap-2">
+                  <div className="w-7 h-7 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold text-gray-600">{r.author[0]}</div>
+                  <p className="text-sm font-semibold text-gray-900">{r.author}</p>
+                </div>
               </div>
             ))}
           </div>
-          <p className="text-center text-xs text-gray-400 mt-6">* Review examples shown for illustrative purposes. Real customer reviews available on request and via Google.</p>
+          <p className="text-center text-xs text-gray-400 mt-6">Real Google reviews from verified customers &#183; <a href="https://g.co/kgs/arc-electrical-gas-leeds" className="underline hover:text-gray-600" target="_blank" rel="noopener noreferrer">View all 12 reviews on Google</a></p>
         </div>
       </section>
 

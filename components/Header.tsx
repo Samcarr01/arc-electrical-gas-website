@@ -18,24 +18,43 @@ const nav = [
   { name: 'Contact', href: '/contact' },
 ]
 
+// SVG logo matching brand: black bg, yellow bolt, blue flame, white text
+function ArcLogo({ className = '' }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 220 64"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      aria-label="Arc Electrical & Gas (Leeds) Ltd"
+    >
+      {/* Yellow lightning bolt */}
+      <polygon
+        points="22,4 12,32 20,32 10,60 30,28 22,28 32,4"
+        fill="#FFD700"
+      />
+      {/* Blue gas flame */}
+      <path
+        d="M34,12 C34,6 40,2 40,2 C40,8 46,10 46,16 C46,22 42,26 40,26 C37,26 34,22 34,16 Z"
+        fill="#3B82F6"
+      />
+      {/* Company name */}
+      <text x="54" y="26" fontFamily="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" fontWeight="700" fontSize="17" fill="#FFFFFF">Arc Electrical &amp; Gas</text>
+      <text x="54" y="46" fontFamily="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" fontWeight="400" fontSize="13" fill="#9CA3AF">(Leeds) Ltd</text>
+    </svg>
+  )
+}
+
 export default function Header() {
   const [open, setOpen] = useState(false)
   const pathname = usePathname()
 
   return (
-    <header className="bg-navy sticky top-0 z-50 shadow-lg">
+    <header className="bg-gray-900 sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link href="/" className="flex items-center gap-2.5 flex-shrink-0">
-            <div className="bg-orange-500 rounded-lg p-2">
-              <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-              </svg>
-            </div>
-            <div className="leading-tight">
-              <span className="text-white font-bold text-sm block">ARC Electrical</span>
-              <span className="text-orange-400 text-xs block">&amp; Gas</span>
-            </div>
+
+          <Link href="/" className="flex-shrink-0">
+            <ArcLogo className="h-10 w-auto" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-1">
@@ -44,7 +63,7 @@ export default function Header() {
                 <Link
                   href={item.href}
                   className={`text-sm font-medium px-3 py-2 rounded-md transition-colors ${
-                    pathname === item.href ? 'text-orange-400' : 'text-gray-200 hover:text-white hover:bg-white/10'
+                    pathname === item.href ? 'text-yellow-400' : 'text-gray-300 hover:text-white hover:bg-white/10'
                   }`}
                 >
                   {item.name}
@@ -54,7 +73,7 @@ export default function Header() {
                     <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-2">
                       {item.children.map((c) => (
                         <Link key={c.name} href={c.href}
-                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-navy hover:text-white transition-colors">
+                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-900 hover:text-white transition-colors">
                           {c.name}
                         </Link>
                       ))}
@@ -66,10 +85,8 @@ export default function Header() {
           </nav>
 
           <a href="tel:07810413488"
-            className="hidden md:inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-2.5 rounded-lg transition-colors text-sm">
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-            </svg>
+            className="hidden md:inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-4 py-2.5 rounded-lg transition-colors text-sm">
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
             07810 413488
           </a>
 
@@ -106,10 +123,8 @@ export default function Header() {
             ))}
             <div className="pt-3 border-t border-white/10">
               <a href="tel:07810413488"
-                className="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-semibold px-4 py-3 rounded-lg transition-colors">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                </svg>
+                className="flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-4 py-3 rounded-lg transition-colors">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
                 Call 07810 413488
               </a>
             </div>

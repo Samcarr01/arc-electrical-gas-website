@@ -9,14 +9,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Brand palette — matched from logo
+        // Background/dark: near-black (logo background colour)
+        // Yellow: lightning bolt accent
+        // Blue: gas flame accent
         navy: {
-          DEFAULT: '#1D3461',
-          50: '#EEF1F7',
-          100: '#CDD5E6',
-          600: '#1D3461',
-          700: '#162851',
-          800: '#0F1C3A',
-          900: '#080E1F',
+          DEFAULT: '#111827',
+          50: '#F9FAFB',
+          100: '#F3F4F6',
+          600: '#111827',
+          700: '#0D1117',
+          800: '#080C10',
+          900: '#020408',
         },
       },
       fontFamily: {

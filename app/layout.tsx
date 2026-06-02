@@ -11,6 +11,7 @@ export const metadata: Metadata = {
   description:
     'ARC Electrical & Gas — NAPIT & Gas Safe registered electricians and gas engineers serving Kippax, Garforth, Allerton Bywater, Micklefield and surrounding areas. Call 07810 413488.',
   metadataBase: new URL('https://www.arcelectricalandgas.co.uk'),
+  alternates: { canonical: '/' },
   openGraph: { type: 'website', locale: 'en_GB', siteName: 'ARC Electrical & Gas' },
   robots: { index: true, follow: true },
 }
@@ -21,20 +22,20 @@ const schema = {
   name: 'ARC Electrical & Gas',
   legalName: 'Arc Electrical And Gas (Leeds) Ltd',
   description:
-    'NAPIT and Gas Safe registered electricians and gas engineers serving Kippax, Garforth, Allerton Bywater, Micklefield and surrounding Leeds areas.',
+    'NAPIT and Gas Safe registered electricians and gas engineers serving Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford, Fairburn, South Milford and surrounding Leeds areas.',
   url: 'https://www.arcelectricalandgas.co.uk',
   telephone: ['+447810413488', '+441132866140'],
   email: 'chris@arcelectricalandgas.co.uk',
   areaServed: [
     'Kippax', 'Garforth', 'Allerton Bywater', 'Micklefield',
-    'Great Preston', 'Swillington', 'Rothwell', 'Cross Gates',
-    'Castleford', 'Sherburn in Elmet', 'Leeds',
+    'Sherburn in Elmet', 'South Milford', 'Castleford', 'Fairburn',
+    'Great Preston', 'Swillington', 'Rothwell', 'Cross Gates', 'Selby', 'Leeds',
   ],
   openingHoursSpecification: [{
     '@type': 'OpeningHoursSpecification',
     dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
     opens: '08:00',
-    closes: '18:00',
+    closes: '17:00',
   }],
   hasCredential: [
     { '@type': 'EducationalOccupationalCredential', name: 'NAPIT Approved Domestic & Commercial Installer' },
@@ -43,6 +44,12 @@ const schema = {
     { '@type': 'EducationalOccupationalCredential', name: 'Worcester Bosch Accredited Installer' },
   ],
   identifier: { '@type': 'PropertyValue', name: 'Companies House', value: '10263305' },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5.0',
+    reviewCount: '12',
+    bestRating: '5',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
