@@ -46,10 +46,10 @@ export default function AreasPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Primary Service Areas</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-14">
             {primaryAreas.map(area => (
-              <div key={area.name} className="bg-gray-50 rounded-2xl p-7 border border-gray-100">
+              <div key={area.name} className="flex flex-col bg-gray-50 rounded-2xl p-7 border border-gray-100">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{area.name}</h3>
                 <p className="text-gray-600 text-sm mb-5">{area.desc}</p>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-3 mt-auto">
                   <Link href={area.electricHref} className="flex items-center justify-center text-center gap-2 h-12 bg-navy hover:bg-navy-700 text-white font-medium px-4 rounded-lg transition-colors text-sm leading-tight">
                     &#9889; Electrician in {area.name}
                   </Link>
