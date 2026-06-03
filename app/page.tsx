@@ -3,6 +3,7 @@ import Link from 'next/link'
 import TrustBadges from '@/components/TrustBadges'
 import CTABanner from '@/components/CTABanner'
 import FAQSection from '@/components/FAQSection'
+import HeroCarousel from '@/components/HeroCarousel'
 
 export const metadata: Metadata = {
   title: 'Electrician & Gas Engineer in Kippax, Garforth | ARC Electrical & Gas',
@@ -66,29 +67,32 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="bg-navy">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 md:py-32">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-yellow-400/20 text-yellow-300 text-sm font-medium px-3 py-1.5 rounded-full mb-6">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
-              NAPIT &amp; Gas Safe Registered &middot; 5.0 &#11088; on Google
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-yellow-400/20 text-yellow-300 text-sm font-medium px-3 py-1.5 rounded-full mb-6">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
+                NAPIT &amp; Gas Safe Registered &middot; 5.0 &#11088; on Google
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                Local Electrician &amp; Gas Engineer in{' '}
+                <span className="text-yellow-400">Kippax, Garforth</span>{' '}&amp; Surrounding Areas
+              </h1>
+              <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+                ARC Electrical &amp; Gas is a family-run business serving Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford and the surrounding Leeds area. Fully qualified, insured and accredited &mdash; we handle it all safely and professionally.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a href="tel:07810413488" className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-8 py-4 rounded-xl transition-colors text-xl shadow-lg">
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
+                  07810 413488
+                </a>
+                <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg">
+                  Get a Free Quote
+                </Link>
+              </div>
+              <p className="text-blue-200 text-sm mt-4">Mon&ndash;Fri 8am&ndash;5pm &middot; Fully insured &middot; Certified on completion</p>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-              Local Electrician &amp; Gas Engineer in{' '}
-              <span className="text-yellow-400">Kippax, Garforth</span>{' '}&amp; Surrounding Areas
-            </h1>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-              ARC Electrical &amp; Gas is a family-run business serving Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford and the surrounding Leeds area. Fully qualified, insured and accredited &mdash; we handle it all safely and professionally.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a href="tel:07810413488" className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-8 py-4 rounded-xl transition-colors text-xl shadow-lg">
-                <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
-                07810 413488
-              </a>
-              <Link href="/contact" className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-semibold px-8 py-4 rounded-xl transition-colors text-lg">
-                Get a Free Quote
-              </Link>
-            </div>
-            <p className="text-blue-200 text-sm mt-4">Mon&ndash;Fri 8am&ndash;5pm &middot; Fully insured &middot; Certified on completion</p>
+            <HeroCarousel />
           </div>
         </div>
       </section>
