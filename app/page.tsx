@@ -160,8 +160,9 @@ export default function HomePage() {
                   <div className="space-y-2.5 mb-6">
                     {elServices.map(s => (
                       <div key={s.name} className="flex items-start gap-3">
-                        <svg className="w-4 h-4 text-navy flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                        <div><span className="font-medium text-gray-900 text-sm">{s.name}</span><span className="text-gray-500 text-sm"> &mdash; {s.desc}</span></div>
+                        {/* FIX 1: dark tick for readability over background image */}
+                        <svg className="w-4 h-4 text-[#111111] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                        <div><span className="font-semibold text-[#111111] text-sm">{s.name}</span><span className="text-gray-800 text-sm"> &mdash; {s.desc}</span></div>
                       </div>
                     ))}
                   </div>
@@ -170,7 +171,7 @@ export default function HomePage() {
                   <div className="border-t border-gray-200 pt-4 mb-5 flex items-center gap-4">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src="/logos/napit-27992.png" alt="NAPIT Part P Approved Electrician No. 27992" className="h-16 w-auto object-contain flex-shrink-0" />
-                    <p className="text-xs text-gray-500 leading-snug">NAPIT Part P Approved<br />Electrician No. 27992</p>
+                    <p className="text-xs text-gray-800 leading-snug font-medium">NAPIT Part P Approved<br />Electrician No. 27992</p>
                   </div>
 
                   <Link href="/electrical-services" className="inline-flex items-center gap-2 bg-navy hover:bg-navy-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">View All Electrical Services &rarr;</Link>
@@ -186,10 +187,13 @@ export default function HomePage() {
                 <svg className="absolute -right-5 -bottom-7 w-48 h-48 text-white/5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C9 6.5 6.5 10.5 6.5 14.5a5.5 5.5 0 0011 0C17.5 10.5 15 6.5 12 2z"/></svg>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="flex items-center gap-3">
-                    {/* FIX 3: navy bg, light-blue FILLED teardrop flame SVG */}
+                    {/* FIX 3: classic flame silhouette — teardrop with curved indent at the tip */}
                     <div className="bg-navy border-2 border-[#7EC8E3] rounded-xl p-2.5">
-                      <svg className="w-7 h-7 text-[#7EC8E3]" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C9 6.5 6.5 10.5 6.5 14.5a5.5 5.5 0 0011 0C17.5 10.5 15 6.5 12 2z"/>
+                      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
+                        {/* Outer flame body */}
+                        <path d="M12 2C9.5 5.5 7 9.5 7 13.5a5 5 0 0010 0C17 9.5 14.5 5.5 12 2z" fill="#7EC8E3"/>
+                        {/* Concave notch at tip in navy — creates the classic flame indent */}
+                        <path d="M12 2C10.5 4 11 6.5 12 7.5C13 6.5 13.5 4 12 2Z" fill="#1A3E8B"/>
                       </svg>
                     </div>
                     <h3 className="text-2xl font-bold text-white">Gas Services</h3>
@@ -197,20 +201,23 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Card body — FIX 4: blue flames photo at ~40% visibility */}
+              {/* Card body — FIX 2: boiler/heating photo background.
+                  TODO for Chris: replace /img/boiler.jpg with a real boiler photo (e.g. a Worcester Bosch install)
+                  by dropping the file into /public/img/ and updating this path */}
               <div className="p-8 relative overflow-hidden">
                 <div
                   className="absolute inset-0"
-                  style={{ backgroundImage: "url('/flames-new.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                  style={{ backgroundImage: "url('/img/boiler.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
                 />
-                {/* Overlay at 62% opacity → ~38% flames shows through */}
-                <div className="absolute inset-0 bg-gray-50/[0.62]" />
+                {/* Overlay at 55% opacity → ~45% of photo shows through */}
+                <div className="absolute inset-0 bg-gray-50/[0.55]" />
                 <div className="relative z-10">
                   <div className="space-y-2.5 mb-6">
                     {gasServices.map(s => (
                       <div key={s.name} className="flex items-start gap-3">
-                        <svg className="w-4 h-4 text-yellow-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                        <div><span className="font-medium text-gray-900 text-sm">{s.name}</span><span className="text-gray-500 text-sm"> &mdash; {s.desc}</span></div>
+                        {/* FIX 1: dark tick for readability over background image */}
+                        <svg className="w-4 h-4 text-[#111111] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                        <div><span className="font-semibold text-[#111111] text-sm">{s.name}</span><span className="text-gray-800 text-sm"> &mdash; {s.desc}</span></div>
                       </div>
                     ))}
                   </div>
@@ -220,8 +227,8 @@ export default function HomePage() {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src="/logos/gas-safe.png" alt="Gas Safe Register" className="h-16 w-auto object-contain flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-gray-900 text-sm">Gas Safe Registered</p>
-                      <p className="text-gray-500 text-sm">Reg. No. <strong className="text-gray-700">584102</strong></p>
+                      <p className="font-semibold text-[#111111] text-sm">Gas Safe Registered</p>
+                      <p className="text-gray-800 text-sm">Reg. No. <strong className="text-[#111111]">584102</strong></p>
                     </div>
                   </div>
 
