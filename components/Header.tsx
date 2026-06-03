@@ -26,18 +26,36 @@ export default function Header() {
   return (
     <header className="bg-navy sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20 md:h-24">
+        {/*
+          FIX 1 — Logo:
+          Mobile:  absolute-centred, 170px wide
+          Desktop: static in flow on the left, h-16
+          Use relative on the row so absolute positioning is contained.
+        */}
+        <div className="flex items-center justify-between h-20 md:h-24 relative">
 
-          <Link href="/" className="flex-shrink-0">
+          {/* Desktop-only logo — left-aligned, in normal flow */}
+          <Link href="/" className="hidden lg:flex flex-shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={LOGO_DATA_URL}
               alt="Arc Electrical & Gas (Leeds) Ltd"
-              height={70}
-              className="h-14 w-auto"
+              className="h-16 w-auto"
             />
           </Link>
 
+          {/* Mobile-only logo — absolutely centred */}
+          <Link href="/" className="lg:hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={LOGO_DATA_URL}
+              alt="Arc Electrical & Gas (Leeds) Ltd"
+              style={{ width: '170px' }}
+              className="w-auto h-auto"
+            />
+          </Link>
+
+          {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-1">
             {nav.map((item) => (
               <div key={item.name} className="relative group">
@@ -65,6 +83,7 @@ export default function Header() {
             ))}
           </nav>
 
+          {/* Right: social + phone + hamburger */}
           <div className="flex items-center gap-2 md:gap-3">
             <a href="https://www.facebook.com/arcelectricalandgas" target="_blank" rel="noopener noreferrer"
               aria-label="Follow ARC Electrical & Gas on Facebook"

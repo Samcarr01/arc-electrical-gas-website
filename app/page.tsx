@@ -75,8 +75,10 @@ export default function HomePage() {
           */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
 
-            {/* Carousel — mobile: top; desktop: right */}
-            <div className="order-1 lg:order-2">
+            {/* Carousel — mobile: top; desktop: right
+                FIX 5: negative margins on mobile break out of the px-4/px-6 container
+                so the image goes full-bleed edge-to-edge. Reset to mx-0 on lg+. */}
+            <div className="order-1 lg:order-2 -mx-4 sm:-mx-6 lg:mx-0">
               <HeroCarousel />
             </div>
 
@@ -146,12 +148,14 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Card body — Task 8: faded fuse-board background watermark */}
+              {/* Card body — FIX 4: consumer-unit circuit-breaker photo at ~45% visibility */}
               <div className="p-8 relative overflow-hidden">
                 <div
-                  className="absolute inset-0 opacity-[0.08]"
-                  style={{ backgroundImage: "url('/img/fuse-board.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                  className="absolute inset-0"
+                  style={{ backgroundImage: "url('/img/consumer-unit-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
                 />
+                {/* Overlay at 55% opacity → ~45% of photo shows through */}
+                <div className="absolute inset-0 bg-gray-50/[0.55]" />
                 <div className="relative z-10">
                   <div className="space-y-2.5 mb-6">
                     {elServices.map(s => (
@@ -179,24 +183,28 @@ export default function HomePage() {
 
               {/* Card header — Task 7: light-blue flame on navy */}
               <div className="h-48 relative overflow-hidden bg-gradient-to-br from-navy-800 to-navy">
-                <svg className="absolute -right-5 -bottom-7 w-48 h-48 text-white/5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /></svg>
+                <svg className="absolute -right-5 -bottom-7 w-48 h-48 text-white/5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C9 6.5 6.5 10.5 6.5 14.5a5.5 5.5 0 0011 0C17.5 10.5 15 6.5 12 2z"/></svg>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="flex items-center gap-3">
-                    {/* Task 7: navy bg, light-blue flame */}
+                    {/* FIX 3: navy bg, light-blue FILLED teardrop flame SVG */}
                     <div className="bg-navy border-2 border-[#7EC8E3] rounded-xl p-2.5">
-                      <svg className="w-7 h-7 text-[#7EC8E3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /></svg>
+                      <svg className="w-7 h-7 text-[#7EC8E3]" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C9 6.5 6.5 10.5 6.5 14.5a5.5 5.5 0 0011 0C17.5 10.5 15 6.5 12 2z"/>
+                      </svg>
                     </div>
                     <h3 className="text-2xl font-bold text-white">Gas Services</h3>
                   </div>
                 </div>
               </div>
 
-              {/* Card body — Task 8: faded boiler background watermark */}
+              {/* Card body — FIX 4: blue flames photo at ~40% visibility */}
               <div className="p-8 relative overflow-hidden">
                 <div
-                  className="absolute inset-0 opacity-[0.08]"
-                  style={{ backgroundImage: "url('/img/boiler.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                  className="absolute inset-0"
+                  style={{ backgroundImage: "url('/flames-new.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
                 />
+                {/* Overlay at 62% opacity → ~38% flames shows through */}
+                <div className="absolute inset-0 bg-gray-50/[0.62]" />
                 <div className="relative z-10">
                   <div className="space-y-2.5 mb-6">
                     {gasServices.map(s => (
