@@ -38,10 +38,10 @@ const primaryAreas = [
   { name: 'Garforth', href: '/electrician-garforth' },
   { name: 'Allerton Bywater', href: '/electrician-allerton-bywater' },
   { name: 'Micklefield', href: '/electrician-micklefield' },
-  { name: 'Sherburn in Elmet', href: '/areas-we-cover' },
-  { name: 'South Milford', href: '/areas-we-cover' },
-  { name: 'Castleford', href: '/areas-we-cover' },
-  { name: 'Fairburn', href: '/areas-we-cover' },
+  { name: 'Sherburn in Elmet', href: '/electrician-sherburn-in-elmet' },
+  { name: 'South Milford', href: '/electrician-south-milford' },
+  { name: 'Castleford', href: '/electrician-castleford' },
+  { name: 'Fairburn', href: '/electrician-fairburn' },
   { name: 'Great Preston', href: '/areas-we-cover' },
   { name: 'Swillington', href: '/areas-we-cover' },
 ]
@@ -107,15 +107,14 @@ export default function HomePage() {
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">We handle it all safely and professionally.</p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Electrical with lightbulb image */}
+            {/* Electrical */}
             <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
-              <div className="h-48 relative overflow-hidden bg-navy">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/lightbulbs.jpg" alt="Electrical services" className="w-full h-full object-cover opacity-80" />
-                <div className="absolute inset-0 bg-navy/50 flex items-center justify-center">
+              <div className="h-48 relative overflow-hidden bg-gradient-to-br from-navy to-navy-800">
+                <svg className="absolute -right-5 -bottom-7 w-48 h-48 text-white/5" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                <div className="absolute inset-0 flex items-center justify-center">
                   <div className="flex items-center gap-3">
-                    <div className="bg-navy rounded-xl p-2.5">
-                      <svg className="w-7 h-7 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                    <div className="bg-yellow-400 rounded-xl p-2.5">
+                      <svg className="w-7 h-7 text-gray-900" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
                     </div>
                     <h3 className="text-2xl font-bold text-white">Electrical Services</h3>
                   </div>
@@ -134,12 +133,11 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Gas with flames image */}
+            {/* Gas */}
             <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
-              <div className="h-48 relative overflow-hidden bg-gray-900">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/flames.jpg" alt="Gas services" className="w-full h-full object-cover opacity-80" />
-                <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <div className="h-48 relative overflow-hidden bg-gradient-to-br from-navy-800 to-navy">
+                <svg className="absolute -right-5 -bottom-7 w-48 h-48 text-white/5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /></svg>
+                <div className="absolute inset-0 flex items-center justify-center">
                   <div className="flex items-center gap-3">
                     <div className="bg-yellow-400 rounded-xl p-2.5">
                       <svg className="w-7 h-7 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /></svg>
@@ -193,7 +191,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/van.jpg" alt="ARC Electrical & Gas van" className="w-full h-80 object-cover" />
+                <img src="/van-2.jpg" alt="ARC Electrical & Gas company van — 100% electric, Gas Safe & NAPIT registered" className="w-full h-80 object-cover" />
               </div>
               <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-gray-900 rounded-xl px-4 py-3 font-bold text-sm shadow-lg">
                 5.0 &#11088; Google &middot; 12 Reviews

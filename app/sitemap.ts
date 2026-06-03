@@ -20,6 +20,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: '/gas-engineer-garforth', priority: 0.9, changeFrequency: 'monthly' as const },
     { url: '/gas-engineer-allerton-bywater', priority: 0.9, changeFrequency: 'monthly' as const },
     { url: '/gas-engineer-micklefield', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/electrician-sherburn-in-elmet', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/gas-engineer-sherburn-in-elmet', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/electrician-south-milford', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/gas-engineer-south-milford', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/electrician-castleford', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/gas-engineer-castleford', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/electrician-fairburn', priority: 0.8, changeFrequency: 'monthly' as const },
+    { url: '/gas-engineer-fairburn', priority: 0.8, changeFrequency: 'monthly' as const },
   ]
   return pages.map(p => ({
     url: `${BASE}${p.url}`,

@@ -4,6 +4,7 @@ import LocationPageTemplate from '@/components/LocationPageTemplate'
 export const metadata: Metadata = {
   title: 'Electrician in Micklefield | ARC Electrical & Gas',
   description: 'Local electrician in Micklefield. ARC Electrical & Gas are NAPIT & Part P accredited. EICR, fuse boards, sockets, lighting, landlord certificates. Call 07810 413488.',
+  alternates: { canonical: '/electrician-micklefield' },
 }
 
 export default function ElectricianMicklefieldPage() {

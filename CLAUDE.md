@@ -110,6 +110,13 @@ public/
 
 ## Outstanding tasks
 
+### Service card photos — homepage (electrical & gas)
+The two homepage service cards (Electrical, Gas) use **temporary navy colour headers** (icon + title, no photo). The original `lightbulbs.jpg` / `flames.jpg` now live in the hero carousel, so photos were removed here to avoid showing the same image twice on the page. **To do:** replace with real job photos from Chris —
+- Electrical: a fuse board / consumer unit install
+- Gas: a boiler install or service
+
+Process: drop photos in `public/`, then in `app/page.tsx` swap each gradient header `<div>` back to an `<img>` treatment (see this file's git history for the previous photo markup).
+
 ### Contact form (not yet active)
 Code is fully wired. User needs to:
 1. Sign up free at **formspree.io**
@@ -122,9 +129,10 @@ When approved and ready:
 2. 123 Reg: Change A record → `76.76.21.21`, add CNAME `www` → `cname.vercel-dns.com`
 3. **Do NOT change MX records** — email is hosted via 123 Reg
 
-### Tier 2 location pages (not yet built)
-Still to add: Great Preston, Swillington, Rothwell, Cross Gates, Castleford, Sherburn in Elmet  
-Process: copy any existing location page (e.g. `electrician-kippax/page.tsx`), update the data, add to `app/sitemap.ts`
+### Tier 2 location pages
+Built (electrician + gas-engineer pages each): Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, South Milford, Castleford, Fairburn.
+Still to add (currently text-only chips under "Other Areas We Cover" on `/areas-we-cover`): Great Preston, Swillington, Rothwell, Cross Gates, Selby
+Process: copy any existing location page (e.g. `electrician-kippax/page.tsx`), update the data, add to `app/sitemap.ts`, and (for primary areas) add buttons on `app/areas-we-cover/page.tsx`
 
 ### Google Business Profile
 Update service areas to include: Sherburn in Elmet, Castleford, Fairburn, South Milford, Selby

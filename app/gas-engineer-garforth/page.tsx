@@ -4,6 +4,7 @@ import LocationPageTemplate from '@/components/LocationPageTemplate'
 export const metadata: Metadata = {
   title: 'Gas Engineer in Garforth | ARC Electrical & Gas',
   description: 'Gas Safe registered engineer in Garforth. ARC Electrical & Gas. Boiler servicing, repairs, new boilers and CP12 gas safety records. Worcester Bosch accredited. Call 07810 413488.',
+  alternates: { canonical: '/gas-engineer-garforth' },
 }
 
 export default function GasEngineerGarforthPage() {

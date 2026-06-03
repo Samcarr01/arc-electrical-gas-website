@@ -4,6 +4,7 @@ import LocationPageTemplate from '@/components/LocationPageTemplate'
 export const metadata: Metadata = {
   title: 'Electrician in Allerton Bywater | ARC Electrical & Gas',
   description: 'Local electrician in Allerton Bywater. ARC Electrical & Gas are NAPIT & Part P accredited. EICR, fuse boards, sockets, lighting, landlord certificates. Call 07810 413488.',
+  alternates: { canonical: '/electrician-allerton-bywater' },
 }
 
 export default function ElectricianAllertonBywaterPage() {

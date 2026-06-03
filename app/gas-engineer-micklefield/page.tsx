@@ -4,6 +4,7 @@ import LocationPageTemplate from '@/components/LocationPageTemplate'
 export const metadata: Metadata = {
   title: 'Gas Engineer in Micklefield | ARC Electrical & Gas',
   description: 'Gas Safe registered engineer in Micklefield. ARC Electrical & Gas. Boiler servicing, repairs, installations and CP12 gas safety records. Call 07810 413488.',
+  alternates: { canonical: '/gas-engineer-micklefield' },
 }
 
 export default function GasEngineerMicklefieldPage() {

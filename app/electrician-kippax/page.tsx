@@ -4,6 +4,7 @@ import LocationPageTemplate from '@/components/LocationPageTemplate'
 export const metadata: Metadata = {
   title: 'Electrician in Kippax | ARC Electrical & Gas',
   description: 'Looking for an electrician in Kippax? ARC Electrical & Gas are NAPIT & Part P accredited with 20+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
+  alternates: { canonical: '/electrician-kippax' },
 }
 
 export default function ElectricianKippaxPage() {

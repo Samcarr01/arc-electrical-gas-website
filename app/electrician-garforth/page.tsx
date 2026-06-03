@@ -4,6 +4,7 @@ import LocationPageTemplate from '@/components/LocationPageTemplate'
 export const metadata: Metadata = {
   title: 'Electrician in Garforth | ARC Electrical & Gas',
   description: 'Looking for an electrician in Garforth? ARC Electrical & Gas are NAPIT & Part P accredited with 20+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
+  alternates: { canonical: '/electrician-garforth' },
 }
 
 export default function ElectricianGarforthPage() {

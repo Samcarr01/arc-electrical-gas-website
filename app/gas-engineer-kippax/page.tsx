@@ -4,6 +4,7 @@ import LocationPageTemplate from '@/components/LocationPageTemplate'
 export const metadata: Metadata = {
   title: 'Gas Engineer in Kippax | ARC Electrical & Gas',
   description: 'Looking for a gas engineer in Kippax? ARC Electrical & Gas are Gas Safe registered & Worcester Bosch accredited. Boiler servicing, repairs, installations and CP12 certificates. Call 07810 413488.',
+  alternates: { canonical: '/gas-engineer-kippax' },
 }
 
 export default function GasEngineerKippaxPage() {

@@ -13,10 +13,10 @@ const primaryAreas = [
   { name: 'Garforth', desc: 'Larger town in LS25, with a mix of residential and commercial properties.', electricHref: '/electrician-garforth', gasHref: '/gas-engineer-garforth' },
   { name: 'Allerton Bywater', desc: 'Village on the River Aire, between Kippax and Castleford.', electricHref: '/electrician-allerton-bywater', gasHref: '/gas-engineer-allerton-bywater' },
   { name: 'Micklefield', desc: 'Village in the LS25 area between Garforth and Sherburn in Elmet.', electricHref: '/electrician-micklefield', gasHref: '/gas-engineer-micklefield' },
-  { name: 'Sherburn in Elmet', desc: 'Market town in North Yorkshire, south-east of Leeds.', electricHref: '/areas-we-cover', gasHref: '/areas-we-cover' },
-  { name: 'South Milford', desc: 'Village between Sherburn in Elmet and Selby in the LS25 area.', electricHref: '/areas-we-cover', gasHref: '/areas-we-cover' },
-  { name: 'Castleford', desc: 'West Yorkshire town, close to Kippax and Allerton Bywater.', electricHref: '/areas-we-cover', gasHref: '/areas-we-cover' },
-  { name: 'Fairburn', desc: 'Small village near Castleford and Kippax in the LS25 area.', electricHref: '/areas-we-cover', gasHref: '/areas-we-cover' },
+  { name: 'Sherburn in Elmet', desc: 'Market town in North Yorkshire, south-east of Leeds.', electricHref: '/electrician-sherburn-in-elmet', gasHref: '/gas-engineer-sherburn-in-elmet' },
+  { name: 'South Milford', desc: 'Village between Sherburn in Elmet and Selby in the LS25 area.', electricHref: '/electrician-south-milford', gasHref: '/gas-engineer-south-milford' },
+  { name: 'Castleford', desc: 'West Yorkshire town, close to Kippax and Allerton Bywater.', electricHref: '/electrician-castleford', gasHref: '/gas-engineer-castleford' },
+  { name: 'Fairburn', desc: 'Small village near Castleford and Kippax in the LS25 area.', electricHref: '/electrician-fairburn', gasHref: '/gas-engineer-fairburn' },
 ]
 
 const secondaryAreas = ['Great Preston', 'Swillington', 'Rothwell', 'Cross Gates', 'Selby']
@@ -49,11 +49,11 @@ export default function AreasPage() {
               <div key={area.name} className="bg-gray-50 rounded-2xl p-7 border border-gray-100">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{area.name}</h3>
                 <p className="text-gray-600 text-sm mb-5">{area.desc}</p>
-                <div className="flex flex-wrap gap-3">
-                  <Link href={area.electricHref} className="inline-flex items-center gap-2 bg-navy hover:bg-navy-700 text-white font-medium px-4 py-2 rounded-lg transition-colors text-sm">
+                <div className="grid grid-cols-2 gap-3">
+                  <Link href={area.electricHref} className="flex items-center justify-center text-center gap-2 h-12 bg-navy hover:bg-navy-700 text-white font-medium px-4 rounded-lg transition-colors text-sm leading-tight">
                     &#9889; Electrician in {area.name}
                   </Link>
-                  <Link href={area.gasHref} className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-medium px-4 py-2 rounded-lg transition-colors text-sm">
+                  <Link href={area.gasHref} className="flex items-center justify-center text-center gap-2 h-12 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-medium px-4 rounded-lg transition-colors text-sm leading-tight">
                     &#128293; Gas Engineer in {area.name}
                   </Link>
                 </div>
