@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import TrustBadges from '@/components/TrustBadges'
+import AccreditationLogos from '@/components/AccreditationLogos'
 import CTABanner from '@/components/CTABanner'
 import FAQSection from '@/components/FAQSection'
 import HeroCarousel from '@/components/HeroCarousel'
@@ -47,8 +48,8 @@ const primaryAreas = [
 ]
 
 const reviews = [
-  { text: 'Fantastic job. Highly recommend ARC electrical & gas. The price quoted was great and we were kept informed at all times. Hit a snag when past work wasn’t up to scratch, Chris put it all right and has left us feeling safe. Will always use Chris, thank you for a great job.', author: 'B Wood', stars: 5 },
-  { text: 'Chris has been maintaining my central heating system for many years. When my boiler started to drip he re-arranged his schedule and came first thing the next morning. The fault was quickly diagnosed and fixed. Outstanding service from a really nice bloke. I can’t recommend him highly enough.', author: 'Jonathan Clay', stars: 5 },
+  { text: "Fantastic job. Highly recommend ARC electrical & gas. The price quoted was great and we were kept informed at all times. Hit a snag when past work wasn't up to scratch, Chris put it all right and has left us feeling safe. Will always use Chris, thank you for a great job.", author: 'B Wood', stars: 5 },
+  { text: "Chris has been maintaining my central heating system for many years. When my boiler started to drip he re-arranged his schedule and came first thing the next morning. The fault was quickly diagnosed and fixed. Outstanding service from a really nice bloke. I can't recommend him highly enough.", author: 'Jonathan Clay', stars: 5 },
   { text: 'Chris responded immediately to my query and came at 9 the next morning. Sorted out a dodgy switch quickly and with no fuss, just for his call out charge. Would recommend.', author: 'Kevin Oldershaw', stars: 5 },
   { text: 'Responded quickly, was very professional and kept us updated throughout. Fitted repair in around our availability. Price was fair. Will definitely use again.', author: 'Dan Norvell', stars: 5 },
 ]
@@ -65,11 +66,22 @@ const faqs = [
 export default function HomePage() {
   return (
     <>
-      {/* Hero */}
+      {/* ── Hero ── */}
       <section className="bg-navy">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-28">
+          {/*
+            Mobile:  carousel first (order-1), then text (order-2)
+            Desktop: text left (lg:order-1), carousel right (lg:order-2)
+          */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+
+            {/* Carousel — mobile: top; desktop: right */}
+            <div className="order-1 lg:order-2">
+              <HeroCarousel />
+            </div>
+
+            {/* Text — mobile: below carousel; desktop: left */}
+            <div className="order-2 lg:order-1">
               <div className="inline-flex items-center gap-2 bg-yellow-400/20 text-yellow-300 text-sm font-medium px-3 py-1.5 rounded-full mb-6">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
                 NAPIT &amp; Gas Safe Registered &middot; 5.0 &#11088; on Google
@@ -92,83 +104,135 @@ export default function HomePage() {
               </div>
               <p className="text-blue-200 text-sm mt-4">Mon&ndash;Fri 8am&ndash;5pm &middot; Fully insured &middot; Certified on completion</p>
             </div>
-            <HeroCarousel />
+
           </div>
         </div>
       </section>
 
+      {/* ── Task 2: Accreditation logos row ── */}
+      <AccreditationLogos />
+
       <TrustBadges />
 
-      {/* Services with images */}
+      {/* ── Services ── */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
+          <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Electrical &amp; Gas Services</h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">We handle it all safely and professionally.</p>
+            {/* Task 5 — extra phone link in middle of page */}
+            <a href="tel:07810413488" className="inline-flex items-center gap-2 mt-4 text-navy font-semibold hover:text-navy-700 transition-colors">
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
+              Call 07810 413488 to book
+            </a>
           </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Electrical */}
+
+            {/* ── Electrical card ── */}
             <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
+
+              {/* Card header — Task 6: yellow bolt on navy circle */}
               <div className="h-48 relative overflow-hidden bg-gradient-to-br from-navy to-navy-800">
                 <svg className="absolute -right-5 -bottom-7 w-48 h-48 text-white/5" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="flex items-center gap-3">
-                    <div className="bg-yellow-400 rounded-xl p-2.5">
-                      <svg className="w-7 h-7 text-gray-900" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                    {/* Task 6: navy bg, yellow icon */}
+                    <div className="bg-navy border-2 border-yellow-400 rounded-xl p-2.5">
+                      <svg className="w-7 h-7 text-yellow-400" fill="currentColor" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
                     </div>
                     <h3 className="text-2xl font-bold text-white">Electrical Services</h3>
                   </div>
                 </div>
               </div>
-              <div className="p-8">
-                <div className="space-y-2.5 mb-6">
-                  {elServices.map(s => (
-                    <div key={s.name} className="flex items-start gap-3">
-                      <svg className="w-4 h-4 text-navy flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                      <div><span className="font-medium text-gray-900 text-sm">{s.name}</span><span className="text-gray-500 text-sm"> &mdash; {s.desc}</span></div>
-                    </div>
-                  ))}
+
+              {/* Card body — Task 8: faded fuse-board background watermark */}
+              <div className="p-8 relative overflow-hidden">
+                <div
+                  className="absolute inset-0 opacity-[0.08]"
+                  style={{ backgroundImage: "url('/img/fuse-board.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                />
+                <div className="relative z-10">
+                  <div className="space-y-2.5 mb-6">
+                    {elServices.map(s => (
+                      <div key={s.name} className="flex items-start gap-3">
+                        <svg className="w-4 h-4 text-navy flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                        <div><span className="font-medium text-gray-900 text-sm">{s.name}</span><span className="text-gray-500 text-sm"> &mdash; {s.desc}</span></div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Task 3: NAPIT 27992 logo */}
+                  <div className="border-t border-gray-200 pt-4 mb-5 flex items-center gap-4">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/logos/napit-27992.png" alt="NAPIT Part P Approved Electrician No. 27992" className="h-16 w-auto object-contain flex-shrink-0" />
+                    <p className="text-xs text-gray-500 leading-snug">NAPIT Part P Approved<br />Electrician No. 27992</p>
+                  </div>
+
+                  <Link href="/electrical-services" className="inline-flex items-center gap-2 bg-navy hover:bg-navy-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">View All Electrical Services &rarr;</Link>
                 </div>
-                <Link href="/electrical-services" className="inline-flex items-center gap-2 bg-navy hover:bg-navy-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">View All Electrical Services &rarr;</Link>
               </div>
             </div>
 
-            {/* Gas */}
+            {/* ── Gas card ── */}
             <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
+
+              {/* Card header — Task 7: light-blue flame on navy */}
               <div className="h-48 relative overflow-hidden bg-gradient-to-br from-navy-800 to-navy">
                 <svg className="absolute -right-5 -bottom-7 w-48 h-48 text-white/5" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /></svg>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="flex items-center gap-3">
-                    <div className="bg-yellow-400 rounded-xl p-2.5">
-                      <svg className="w-7 h-7 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /></svg>
+                    {/* Task 7: navy bg, light-blue flame */}
+                    <div className="bg-navy border-2 border-[#7EC8E3] rounded-xl p-2.5">
+                      <svg className="w-7 h-7 text-[#7EC8E3]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" /></svg>
                     </div>
                     <h3 className="text-2xl font-bold text-white">Gas Services</h3>
                   </div>
                 </div>
               </div>
-              <div className="p-8">
-                <div className="space-y-2.5 mb-6">
-                  {gasServices.map(s => (
-                    <div key={s.name} className="flex items-start gap-3">
-                      <svg className="w-4 h-4 text-yellow-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                      <div><span className="font-medium text-gray-900 text-sm">{s.name}</span><span className="text-gray-500 text-sm"> &mdash; {s.desc}</span></div>
+
+              {/* Card body — Task 8: faded boiler background watermark */}
+              <div className="p-8 relative overflow-hidden">
+                <div
+                  className="absolute inset-0 opacity-[0.08]"
+                  style={{ backgroundImage: "url('/img/boiler.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                />
+                <div className="relative z-10">
+                  <div className="space-y-2.5 mb-6">
+                    {gasServices.map(s => (
+                      <div key={s.name} className="flex items-start gap-3">
+                        <svg className="w-4 h-4 text-yellow-600 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                        <div><span className="font-medium text-gray-900 text-sm">{s.name}</span><span className="text-gray-500 text-sm"> &mdash; {s.desc}</span></div>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Task 4: Gas Safe logo + reg number */}
+                  <div className="border-t border-gray-200 pt-4 mb-5 flex items-center gap-4">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/logos/gas-safe.png" alt="Gas Safe Register" className="h-16 w-auto object-contain flex-shrink-0" />
+                    <div>
+                      <p className="font-semibold text-gray-900 text-sm">Gas Safe Registered</p>
+                      <p className="text-gray-500 text-sm">Reg. No. <strong className="text-gray-700">584102</strong></p>
                     </div>
-                  ))}
+                  </div>
+
+                  <Link href="/gas-services" className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-6 py-3 rounded-lg transition-colors">View All Gas Services &rarr;</Link>
                 </div>
-                <Link href="/gas-services" className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-6 py-3 rounded-lg transition-colors">View All Gas Services &rarr;</Link>
               </div>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* Why choose us + van photo */}
+      {/* ── Why choose us + van photo ── */}
       <section className="py-20 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose ARC Electrical &amp; Gas?</h2>
-              <p className="text-blue-100 text-lg mb-8">We’re a family business, not a large national company. You get direct communication, an honest service and a team that cares about its local reputation.</p>
+              <p className="text-blue-100 text-lg mb-8">We&apos;re a family business, not a large national company. You get direct communication, an honest service and a team that cares about its local reputation.</p>
               <div className="space-y-4">
                 {[
                   ['NAPIT Approved & Part P Accredited', 'All electrical work self-certified under Part P of the Building Regulations.'],
@@ -186,6 +250,11 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
+              {/* Task 5 — extra phone link in Why Choose Us section */}
+              <a href="tel:07810413488" className="mt-8 inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-6 py-3 rounded-xl transition-colors">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
+                Call 07810 413488
+              </a>
             </div>
             {/* Van photo */}
             <div className="relative">
@@ -201,7 +270,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Areas */}
+      {/* ── Areas ── */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
@@ -221,7 +290,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Real Google Reviews */}
+      {/* ── Reviews ── */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
