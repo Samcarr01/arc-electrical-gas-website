@@ -184,16 +184,24 @@ export default function HomePage() {
 
               {/* Card header — Task 7: light-blue flame on navy */}
               <div className="h-48 relative overflow-hidden bg-gradient-to-br from-navy-800 to-navy">
-                <svg className="absolute -right-5 -bottom-7 w-48 h-48" viewBox="0 0 24 24" fill="rgba(255,255,255,0.05)">
-                  <path d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 11.954 11.954 0 003 12c0 6.06 4.94 11 11 11s11-4.94 11-11c0-6.06-4.94-11-11-11A11.954 11.954 0 0012.395 2.553z"/>
+                <svg className="absolute -right-5 -bottom-7 w-48 h-48" viewBox="0 0 24 24">
+                  <path fillRule="evenodd" clipRule="evenodd" fill="rgba(255,255,255,0.05)"
+                    d="M12 2C9 6 7 10 7 14a5 5 0 0010 0C17 10 15 6 12 2z M12 5C14.5 7.5 14 11.5 12 12.5C10 11.5 9.5 7.5 12 5z"/>
                 </svg>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="flex items-center gap-3">
-                    {/* Flame icon — Heroicons v1 "fire" solid path (MIT licence).
-                        Asymmetric shape with rounded base clearly reads as fire, not a water droplet. */}
+                    {/* Flame icon:
+                        - Outer: pointed tip at top, widest belly at mid-height, POINTED BASE
+                          (both ends taper = unmistakably a flame, not a water droplet)
+                        - Inner notch: large split at the tip (evenodd) = classic twin-tongue look */}
                     <div className="bg-navy border-2 border-[#7EC8E3] rounded-xl p-2.5">
-                      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="#7EC8E3">
-                        <path d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 11.954 11.954 0 003 12c0 6.06 4.94 11 11 11s11-4.94 11-11c0-6.06-4.94-11-11-11A11.954 11.954 0 0012.395 2.553z"/>
+                      <svg className="w-7 h-7" viewBox="0 0 24 24">
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          fill="#7EC8E3"
+                          d="M12 2C9 5.5 6 9 6 12.5C6 16 8.5 19.5 12 21C15.5 19.5 18 16 18 12.5C18 9 15 5.5 12 2z M12 5C14.5 8 14 12.5 12 13.5C10 12.5 9.5 8 12 5z"
+                        />
                       </svg>
                     </div>
                     <h3 className="text-2xl font-bold text-white">Gas Services</h3>
@@ -207,7 +215,7 @@ export default function HomePage() {
               <div className="p-8 relative overflow-hidden">
                 <div
                   className="absolute inset-0"
-                  style={{ backgroundImage: "url('/img/boiler.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                  style={{ backgroundImage: "url('/img/boiler-service.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
                 />
                 {/* Overlay at 55% opacity → ~45% of photo shows through */}
                 <div className="absolute inset-0 bg-gray-50/[0.55]" />
