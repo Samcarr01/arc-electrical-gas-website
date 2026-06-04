@@ -184,16 +184,16 @@ export default function HomePage() {
 
               {/* Card header — Task 7: light-blue flame on navy */}
               <div className="h-48 relative overflow-hidden bg-gradient-to-br from-navy-800 to-navy">
-                <svg className="absolute -right-5 -bottom-7 w-48 h-48 text-white/5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C9 6.5 6.5 10.5 6.5 14.5a5.5 5.5 0 0011 0C17.5 10.5 15 6.5 12 2z"/></svg>
+                <svg className="absolute -right-5 -bottom-7 w-48 h-48" viewBox="0 0 24 24" fill="rgba(255,255,255,0.05)">
+                  <path d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 11.954 11.954 0 003 12c0 6.06 4.94 11 11 11s11-4.94 11-11c0-6.06-4.94-11-11-11A11.954 11.954 0 0012.395 2.553z"/>
+                </svg>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="flex items-center gap-3">
-                    {/* FIX 3: classic flame silhouette — teardrop with curved indent at the tip */}
+                    {/* Flame icon — Heroicons v1 "fire" solid path (MIT licence).
+                        Asymmetric shape with rounded base clearly reads as fire, not a water droplet. */}
                     <div className="bg-navy border-2 border-[#7EC8E3] rounded-xl p-2.5">
-                      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none">
-                        {/* Outer flame body */}
-                        <path d="M12 2C9.5 5.5 7 9.5 7 13.5a5 5 0 0010 0C17 9.5 14.5 5.5 12 2z" fill="#7EC8E3"/>
-                        {/* Concave notch at tip in navy — creates the classic flame indent */}
-                        <path d="M12 2C10.5 4 11 6.5 12 7.5C13 6.5 13.5 4 12 2Z" fill="#1A3E8B"/>
+                      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="#7EC8E3">
+                        <path d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 11.954 11.954 0 003 12c0 6.06 4.94 11 11 11s11-4.94 11-11c0-6.06-4.94-11-11-11A11.954 11.954 0 0012.395 2.553z"/>
                       </svg>
                     </div>
                     <h3 className="text-2xl font-bold text-white">Gas Services</h3>
