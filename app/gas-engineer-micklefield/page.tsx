@@ -12,7 +12,7 @@ export default function GasEngineerMicklefieldPage() {
     <LocationPageTemplate
       town="Micklefield"
       serviceType="gas-engineer"
-      intro="ARC Electrical & Gas are Gas Safe registered engineers covering Micklefield and the surrounding LS25 area. We carry out boiler servicing, repairs, new installations and gas safety records for homeowners and landlords. All gas work is fully insured with electronic records issued on completion."
+      intro="ARC Electrical & Gas is a Gas Safe registered engineer covering Micklefield and the surrounding LS25 area. We carry out boiler servicing, repairs, new installations and gas safety records for homeowners and landlords. All gas work is fully insured with electronic records issued on completion."
       services={[
         'Annual boiler servicing — all brands and models',
         'Boiler repairs and fault diagnosis',

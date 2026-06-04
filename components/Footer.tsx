@@ -32,7 +32,7 @@ export default function Footer() {
               <img src={LOGO_DATA_URL} alt="Arc Electrical & Gas (Leeds) Ltd" height={60} className="h-16 w-auto" />
             </Link>
             <p className="text-blue-100 text-sm mb-4 leading-relaxed">
-              NAPIT and Gas Safe registered electricians and gas engineers. Serving Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford, Fairburn and surrounding Leeds areas.
+              NAPIT and Gas Safe registered electrician and gas engineer. Serving Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford, Fairburn and surrounding Leeds areas.
             </p>
             {/* Social */}
             <div className="flex items-center gap-4 mb-4">

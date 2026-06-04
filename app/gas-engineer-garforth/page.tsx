@@ -12,7 +12,7 @@ export default function GasEngineerGarforthPage() {
     <LocationPageTemplate
       town="Garforth"
       serviceType="gas-engineer"
-      intro="ARC Electrical & Gas are Gas Safe registered engineers providing boiler servicing, repairs, installations and gas safety records throughout Garforth and the LS25 area. Worcester Bosch accredited installers with over 20 years of experience. Electronic records provided on all gas work."
+      intro="ARC Electrical & Gas is a Gas Safe registered engineer providing boiler servicing, repairs, installations and gas safety records throughout Garforth and the LS25 area. Worcester Bosch accredited installers with over 20 years of experience. Electronic records provided on all gas work."
       services={[
         'Annual boiler servicing — all makes and models',
         'Boiler fault finding and repair',

@@ -27,11 +27,11 @@ const elServices = [
 const gasServices = [
   { name: 'Boiler Servicing', desc: 'Annual servicing to keep your boiler safe and efficient.' },
   { name: 'Boiler Repairs', desc: 'Diagnosing and repairing all makes and models using genuine parts.' },
-  { name: 'Boiler Installation', desc: 'New boiler installation by Worcester Bosch accredited engineers.' },
+  { name: 'Boiler Installation', desc: 'New boiler installation by Worcester Bosch accredited engineer.' },
   { name: 'Gas Safety Records', desc: 'CP12 landlord gas safety certificates for rental properties.' },
   { name: 'Gas Fault Finding', desc: 'Identifying and safely repairing gas faults.' },
   { name: 'Gas Fire Servicing', desc: 'Gas fire inspection, servicing and safety checks.' },
-  { name: 'Replacement Radiators & Small Plumbing Repairs', desc: 'Radiator replacements and minor plumbing repairs by our Gas Safe engineers.' },
+  { name: 'Replacement Radiators & Small Plumbing Repairs', desc: 'Radiator replacements and minor plumbing repairs by our Gas Safe engineer.' },
 ]
 
 const primaryAreas = [
@@ -253,7 +253,7 @@ export default function HomePage() {
               <div className="space-y-4">
                 {[
                   ['NAPIT Approved & Part P Accredited', 'All electrical work self-certified under Part P of the Building Regulations.'],
-                  ['Gas Safe Registered', 'All gas work by Gas Safe registered engineers (Reg. 584102).'],
+                  ['Gas Safe Registered', 'All gas work by Gas Safe registered engineer (Reg. 584102).'],
                   ['Worcester Bosch Accredited', 'Specialist recognised installer for Worcester Bosch boilers.'],
                   ['Over 20 Years Experience', 'Long track record of quality across the Leeds area.'],
                   ['Fully Insured', 'Complete cover for all electrical and gas installation work.'],

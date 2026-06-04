@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     template: '%s | ARC Electrical & Gas',
   },
   description:
-    'ARC Electrical & Gas — NAPIT & Gas Safe registered electricians and gas engineers serving Kippax, Garforth, Allerton Bywater, Micklefield and surrounding areas. Call 07810 413488.',
+    'ARC Electrical & Gas — NAPIT & Gas Safe registered electrician and gas engineer serving Kippax, Garforth, Allerton Bywater, Micklefield and surrounding areas. Call 07810 413488.',
   metadataBase: new URL('https://www.arcelectricalandgas.co.uk'),
   alternates: { canonical: '/' },
   openGraph: { type: 'website', locale: 'en_GB', siteName: 'ARC Electrical & Gas' },
@@ -22,7 +22,7 @@ const schema = {
   name: 'ARC Electrical & Gas',
   legalName: 'Arc Electrical And Gas (Leeds) Ltd',
   description:
-    'NAPIT and Gas Safe registered electricians and gas engineers serving Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford, Fairburn, South Milford and surrounding Leeds areas.',
+    'NAPIT and Gas Safe registered electrician and gas engineer serving Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford, Fairburn, South Milford and surrounding Leeds areas.',
   url: 'https://www.arcelectricalandgas.co.uk',
   telephone: ['+447810413488', '+441132866140'],
   email: 'chris@arcelectricalandgas.co.uk',

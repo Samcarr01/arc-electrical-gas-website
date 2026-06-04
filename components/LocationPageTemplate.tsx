@@ -55,7 +55,7 @@ export default function LocationPageTemplate({ town, serviceType, intro, service
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">{label} Services in {town}</h2>
-              <p className="text-gray-600 mb-6">ARC Electrical &amp; Gas cover {town} and the surrounding area. All work is carried out by fully qualified, insured engineers with over 20 years of experience. A certificate is issued on every job.</p>
+              <p className="text-gray-600 mb-6">ARC Electrical &amp; Gas cover {town} and the surrounding area. All work is carried out by a fully qualified, insured engineer with over 20 years of experience. A certificate is issued on every job.</p>
               <ul className="space-y-3">
                 {services.map(s => (
                   <li key={s} className="flex items-start gap-3">

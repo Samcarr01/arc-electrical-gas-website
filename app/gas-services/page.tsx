@@ -6,7 +6,7 @@ import TrustBadges from '@/components/TrustBadges'
 
 export const metadata: Metadata = {
   title: 'Gas Engineer Services in Kippax, Garforth & Leeds Area',
-  description: 'Gas Safe registered engineers in Kippax, Garforth, Allerton Bywater, Sherburn in Elmet and Castleford. Boiler servicing, repairs, installation, radiators and gas safety records. Call 07810 413488.',
+  description: 'Gas Safe registered engineer in Kippax, Garforth, Allerton Bywater, Sherburn in Elmet and Castleford. Boiler servicing, repairs, installation, radiators and gas safety records. Call 07810 413488.',
   alternates: { canonical: '/gas-services' },
 }
 
@@ -15,10 +15,10 @@ const services = [
   { name: 'Boiler Repairs', desc: 'Diagnosing and repairing faults on all major boiler brands using genuine parts.', icon: '🛠️' },
   { name: 'Boiler Installation', desc: 'New boiler supply and installation. Worcester Bosch accredited installers — extended warranties available.', icon: '⬆️' },
   { name: 'Gas Safety Records (CP12)', desc: 'Gas safety inspections and CP12 certificates for landlords. Electronic record emailed to you or your letting agent on completion.', icon: '📋', href: '/landlord-certificates' },
-  { name: 'Gas Installations', desc: 'New gas pipe work, meter connections and appliance connections by Gas Safe registered engineers.', icon: '🔧' },
+  { name: 'Gas Installations', desc: 'New gas pipe work, meter connections and appliance connections by Gas Safe registered engineer.', icon: '🔧' },
   { name: 'Gas Fire Servicing', desc: 'Gas fire inspection, service and safety check. Service record issued on completion.', icon: '🔥' },
   { name: 'Gas Fault Finding', desc: 'Investigating and safely repairing gas faults including leaks, pressure issues and appliance faults.', icon: '⚠️' },
-  { name: 'Replacement Radiators & Small Plumbing Repairs', desc: 'Radiator replacements and minor plumbing repairs carried out by our Gas Safe registered engineers.', icon: '🔧' },
+  { name: 'Replacement Radiators & Small Plumbing Repairs', desc: 'Radiator replacements and minor plumbing repairs carried out by our Gas Safe registered engineer.', icon: '🔧' },
   { name: 'Appliance Servicing', desc: 'Servicing of gas fires, stoves, water heaters, cookers and hobs to manufacturer’s instructions.', icon: '🍳' },
 ]
 
@@ -37,7 +37,7 @@ const faqs = [
   { question: 'What is a Gas Safety Record (CP12)?', answer: 'A legal requirement for landlords. It confirms all gas appliances and pipework in a rental property have been checked and are safe. Must be renewed every 12 months.' },
   { question: 'Are you a Worcester Bosch accredited installer?', answer: 'Yes. We have completed specific training on Worcester Bosch products and can offer extended manufacturer warranties on new boiler installations.' },
   { question: 'Do you use genuine parts for repairs?', answer: 'Yes. We only use genuine parts on all boiler repairs and gas work, ensuring reliability and maintaining your warranty where applicable.' },
-  { question: 'Can you replace radiators and do small plumbing repairs?', answer: 'Yes. We carry out radiator replacements and minor plumbing repairs, all carried out by our Gas Safe registered engineers.' },
+  { question: 'Can you replace radiators and do small plumbing repairs?', answer: 'Yes. We carry out radiator replacements and minor plumbing repairs, all carried out by our Gas Safe registered engineer.' },
 ]
 
 export default function GasServicesPage() {
@@ -51,7 +51,7 @@ export default function GasServicesPage() {
               <span className="text-yellow-400">Gas Services</span>
             </nav>
             <h1 className="text-4xl md:text-5xl font-bold mb-5">Gas Engineer Services</h1>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">Gas Safe registered engineers serving Kippax, Garforth, Allerton Bywater, Sherburn in Elmet, Castleford and surrounding areas. Boiler servicing, repairs, installations, radiator replacements and landlord gas safety records.</p>
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed">Gas Safe registered engineer serving Kippax, Garforth, Allerton Bywater, Sherburn in Elmet, Castleford and surrounding areas. Boiler servicing, repairs, installations, radiator replacements and landlord gas safety records.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:07810413488" className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-8 py-4 rounded-xl transition-colors text-lg">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>

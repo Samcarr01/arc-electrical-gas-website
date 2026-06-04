@@ -5,7 +5,7 @@ import FAQSection from '@/components/FAQSection'
 
 export const metadata: Metadata = {
   title: 'Boiler Servicing in Kippax, Garforth & Leeds Area',
-  description: 'Annual boiler servicing by Gas Safe registered engineers in Kippax, Garforth, Allerton Bywater and Micklefield. Worcester Bosch accredited. Electronic service record issued. Call 07810 413488.',
+  description: 'Annual boiler servicing by Gas Safe registered engineer in Kippax, Garforth, Allerton Bywater and Micklefield. Worcester Bosch accredited. Electronic service record issued. Call 07810 413488.',
   alternates: { canonical: '/boiler-servicing' },
 }
 
@@ -21,7 +21,7 @@ const checks = [
 const faqs = [
   { question: 'How often should I service my boiler?', answer: 'It is recommended to have your boiler serviced every year. Annual servicing keeps your boiler running safely and efficiently, can identify problems before they become costly breakdowns, and is usually required to maintain your manufacturer’s warranty.' },
   { question: 'What does a boiler service include?', answer: 'Our boiler service includes a gas leak check, flue and combustion inspection, condition check of all components, service to manufacturer’s instructions, combustion analysis, and an electronic service record issued on completion.' },
-  { question: 'Are you Gas Safe registered?', answer: 'Yes. All our engineers are Gas Safe registered (Reg. No. 584102). By law, all gas servicing and repair work must be carried out by a Gas Safe registered engineer.' },
+  { question: 'Are you Gas Safe registered?', answer: 'Yes. Our engineer is Gas Safe registered (Reg. No. 584102). By law, all gas servicing and repair work must be carried out by a Gas Safe registered engineer.' },
   { question: 'Do you service all boiler brands?', answer: 'Yes. We service all major makes and models of gas boiler. As Worcester Bosch accredited installers, we have specialist knowledge of Worcester Bosch products, but we cover all brands.' },
   { question: 'Do you use genuine parts?', answer: 'Yes. We only use genuine parts on all boiler repairs. This ensures the repair is safe, reliable and maintains your warranty where applicable.' },
 ]
@@ -38,7 +38,7 @@ export default function BoilerServicingPage() {
               <span className="text-yellow-400">Boiler Servicing</span>
             </nav>
             <h1 className="text-4xl md:text-5xl font-bold mb-5">Boiler Servicing</h1>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">Annual boiler servicing by Gas Safe registered, Worcester Bosch accredited engineers. Serving Kippax, Garforth, Allerton Bywater, Micklefield and surrounding areas. Electronic service record on completion.</p>
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed">Annual boiler servicing by Gas Safe registered, Worcester Bosch accredited engineer. Serving Kippax, Garforth, Allerton Bywater, Micklefield and surrounding areas. Electronic service record on completion.</p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="tel:07810413488" className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-8 py-4 rounded-xl transition-colors text-lg">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
@@ -55,7 +55,7 @@ export default function BoilerServicingPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">What Does a Boiler Service Include?</h2>
-              <p className="text-gray-600 mb-6">Our Gas Safe registered engineers carry out a thorough boiler service to manufacturer’s instructions. An electronic service record is issued on completion and can be emailed to you.</p>
+              <p className="text-gray-600 mb-6">Our Gas Safe registered engineer carries out a thorough boiler service to manufacturer’s instructions. An electronic service record is issued on completion and can be emailed to you.</p>
               <ul className="space-y-3">
                 {checks.map(c => (
                   <li key={c} className="flex items-start gap-3">

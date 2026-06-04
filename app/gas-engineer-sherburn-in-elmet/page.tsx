@@ -12,7 +12,7 @@ export default function GasEngineerSherburnInElmetPage() {
     <LocationPageTemplate
       town="Sherburn in Elmet"
       serviceType="gas-engineer"
-      intro="ARC Electrical & Gas are Gas Safe registered engineers providing boiler servicing, repairs and installations throughout Sherburn in Elmet and the surrounding LS25 area. Worcester Bosch accredited with over 20 years of experience, we look after homes across this North Yorkshire market town and nearby villages. All gas work is fully insured and an electronic record is issued on completion."
+      intro="ARC Electrical & Gas is a Gas Safe registered engineer providing boiler servicing, repairs and installations throughout Sherburn in Elmet and the surrounding LS25 area. Worcester Bosch accredited with over 20 years of experience, we look after homes across this North Yorkshire market town and nearby villages. All gas work is fully insured and an electronic record is issued on completion."
       services={[
         'Annual boiler servicing to manufacturer’s instructions',
         'Boiler fault diagnosis and repair',
@@ -29,7 +29,7 @@ export default function GasEngineerSherburnInElmetPage() {
         { name: 'Electrician in Sherburn in Elmet', href: '/electrician-sherburn-in-elmet' },
       ]}
       faqs={[
-        { question: 'Are you Gas Safe registered to work in Sherburn in Elmet?', answer: 'Yes. We are Gas Safe registered (Reg. No. 584102). All our gas engineers are fully qualified and registered, and you can verify our registration at gassaferegister.co.uk.' },
+        { question: 'Are you Gas Safe registered to work in Sherburn in Elmet?', answer: 'Yes. We are Gas Safe registered (Reg. No. 584102). Our gas engineer is fully qualified and registered, and you can verify our registration at gassaferegister.co.uk.' },
         { question: 'Can you service my boiler in Sherburn in Elmet?', answer: 'Yes. We carry out annual boiler servicing throughout Sherburn in Elmet. We service all major makes and models and issue an electronic service record on completion.' },
         { question: 'Do you carry out Gas Safety Records for landlords in Sherburn in Elmet?', answer: 'Yes. We carry out CP12 Gas Safety Records for landlords with rental properties in Sherburn in Elmet. Records are issued electronically and can be emailed directly to your letting agent.' },
         { question: 'Do you install Worcester Bosch boilers in Sherburn in Elmet?', answer: 'Yes. We are Worcester Bosch accredited installers, which means we can offer new boilers with extended manufacturer warranties. Contact us to discuss your options.' },
