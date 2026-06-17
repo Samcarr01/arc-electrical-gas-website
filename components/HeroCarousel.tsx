@@ -23,7 +23,7 @@ const slides: Slide[] = [
     type: 'joined',
     key: 'new-van-gas-joined',
     leftSrc: '/van.jpg',
-    rightSrc: '/old-gas-services-bg.jpg',
+    rightSrc: '/auntie-gas-image.jpg',
     alt: 'ARC Electrical & Gas company van beside gas flame services image',
   },
   {
