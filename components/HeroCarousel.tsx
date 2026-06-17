@@ -8,11 +8,23 @@ type HeroSlide = {
   alt: string
 }
 
-const slides: HeroSlide[] = [
+type JoinedSlide = {
+  key: string
+  type: 'joined'
+  leftSrc: string
+  rightSrc: string
+  alt: string
+}
+
+type Slide = HeroSlide | JoinedSlide
+
+const slides: Slide[] = [
   {
-    key: 'old-van-gas-combined',
-    src: '/old-elec-bg.jpg',
-    alt: 'ARC Electrical & Gas company van connected with gas flame services image',
+    type: 'joined',
+    key: 'new-van-gas-joined',
+    leftSrc: '/van.jpg',
+    rightSrc: '/old-flame-bg.jpg',
+    alt: 'ARC Electrical & Gas company van beside gas flame services image',
   },
   {
     key: 'old-lightbulbs',
@@ -50,12 +62,33 @@ export default function HeroCarousel() {
               i === current ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={slide.src}
-              alt={slide.alt}
-              className="absolute inset-0 w-full h-full object-cover"
-            />
+            {'type' in slide && slide.type === 'joined' ? (
+              <div className="grid grid-cols-2 gap-0 h-full w-full">
+                <div className="relative h-full min-w-0 overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={slide.leftSrc}
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+                <div className="relative h-full min-w-0 overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={slide.rightSrc}
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            ) : (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                src={(slide as HeroSlide).src}
+                alt={(slide as HeroSlide).alt}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
           </div>
         ))}
