@@ -148,12 +148,13 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Card body — Chris's fuse board photo, dark blur overlay for white text */}
+              {/* Card body — Chris's fuse board photo, dark overlay for white text */}
               <div className="p-8 relative overflow-hidden">
                 <div
                   className="absolute inset-0"
                   style={{ backgroundImage: "url('/img/electrical-service-chris-fuse-board.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
                 />
+                <div className="absolute inset-0 bg-black/45" />
                 <div className="relative z-10">
                   <div className="space-y-2.5 mb-6">
                     {elServices.map(s => (
@@ -198,12 +199,13 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Card body — boiler engineer photo, dark blur overlay for white text */}
+              {/* Card body — boiler engineer photo, dark overlay for white text */}
               <div className="p-8 relative overflow-hidden">
                 <div
                   className="absolute inset-0"
                   style={{ backgroundImage: "url('/img/gas-service-boiler-engineer.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
                 />
+                <div className="absolute inset-0 bg-black/45" />
                 <div className="relative z-10">
                   <div className="space-y-2.5 mb-6">
                     {gasServices.map(s => (
