@@ -6,16 +6,9 @@ import { LOGO_DATA_URL } from '@/components/logo'
 
 const nav = [
   { name: 'Home', href: '/' },
-  { name: 'Electrical', href: '/electrical-services', children: [
-    { name: 'All Electrical Services', href: '/electrical-services' },
-    { name: 'EICR Testing', href: '/eicr' },
-    { name: 'Landlord Certificates', href: '/landlord-certificates' },
-  ]},
-  { name: 'Gas', href: '/gas-services', children: [
-    { name: 'All Gas Services', href: '/gas-services' },
-    { name: 'Boiler Servicing', href: '/boiler-servicing' },
-  ]},
-  { name: 'Areas We Cover', href: '/areas-we-cover' },
+  { name: 'Electrical Work', href: '/electrical-services' },
+  { name: 'Gas Services', href: '/gas-services' },
+  { name: 'About', href: '/areas-we-cover' },
   { name: 'Contact', href: '/contact' },
 ]
 
@@ -26,64 +19,36 @@ export default function Header() {
   return (
     <header className="bg-navy sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/*
-          Logo:
-          Below 2xl (mobile/tablet/laptop): absolute-centred, 170px wide
-          2xl+: static in flow on the left, h-16
-          Use relative on the row so absolute positioning is contained.
-        */}
         <div className="flex items-center justify-between h-20 md:h-24 relative">
 
-          {/* 2xl+ only logo — left-aligned, in normal flow */}
-          <Link href="/" className="hidden 2xl:flex flex-shrink-0">
+          {/* Logo — always left-aligned */}
+          <Link href="/" className="flex-shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={LOGO_DATA_URL}
               alt="Arc Electrical & Gas (Leeds) Ltd"
-              className="h-16 w-auto"
+              className="h-14 sm:h-16 w-auto"
             />
           </Link>
 
-          {/* Below 2xl logo — absolutely centred */}
-          <Link href="/" className="2xl:hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={LOGO_DATA_URL}
-              alt="Arc Electrical & Gas (Leeds) Ltd"
-              style={{ width: '170px' }}
-              className="w-auto h-auto"
-            />
-          </Link>
-
-          {/* Desktop nav — only at 2xl+ */}
-          <nav className="hidden 2xl:flex items-center gap-1">
+          {/* Desktop nav — inline across the top, visible on md+ */}
+          <nav className="hidden md:flex items-center gap-1">
             {nav.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  href={item.href}
-                  className={`text-sm font-medium px-3 py-2 rounded-md transition-colors ${
-                    pathname === item.href ? 'text-yellow-400' : 'text-gray-200 hover:text-white hover:bg-white/10'
-                  }`}
-                >
-                  {item.name}
-                </Link>
-                {item.children && (
-                  <div className="absolute top-full left-0 hidden group-hover:block pt-1 min-w-52 z-50">
-                    <div className="bg-white rounded-xl shadow-xl border border-gray-100 py-2">
-                      {item.children.map((c) => (
-                        <Link key={c.name} href={c.href}
-                          className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-navy hover:text-white transition-colors">
-                          {c.name}
-                        </Link>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
+              <Link
+                key={item.name}
+                href={item.href}
+                className={`text-sm font-medium px-3 py-2 rounded-md transition-colors whitespace-nowrap ${
+                  pathname === item.href
+                    ? 'text-yellow-400'
+                    : 'text-gray-200 hover:text-white hover:bg-white/10'
+                }`}
+              >
+                {item.name}
+              </Link>
             ))}
           </nav>
 
-          {/* Right: social + phone + hamburger */}
+          {/* Right: social + phone + mobile toggle */}
           <div className="flex items-center gap-2 md:gap-3">
             <a href="https://www.facebook.com/arcelectricalandgas" target="_blank" rel="noopener noreferrer"
               aria-label="Follow ARC Electrical & Gas on Facebook"
@@ -102,8 +67,9 @@ export default function Header() {
               07810 413488
             </a>
 
+            {/* Mobile hamburger — md:hidden only */}
             <button onClick={() => setOpen(!open)}
-              className="2xl:hidden text-white p-2 rounded-md hover:bg-white/10 transition-colors" aria-label="Toggle menu">
+              className="md:hidden text-white p-2 rounded-md hover:bg-white/10 transition-colors" aria-label="Toggle menu">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {open
                   ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -114,25 +80,16 @@ export default function Header() {
           </div>
         </div>
 
+        {/* Mobile nav panel */}
         {open && (
-          <div className="2xl:hidden border-t border-white/10 py-4 space-y-1">
+          <div className="md:hidden border-t border-white/10 py-4 space-y-1">
             {nav.map((item) => (
-              <div key={item.name}>
-                <Link href={item.href} onClick={() => setOpen(false)}
-                  className="block text-gray-200 hover:text-white px-3 py-2 rounded-md text-base font-medium transition-colors">
-                  {item.name}
-                </Link>
-                {item.children && (
-                  <div className="pl-4 mt-1 space-y-1">
-                    {item.children.map((c) => (
-                      <Link key={c.name} href={c.href} onClick={() => setOpen(false)}
-                        className="block text-gray-300 hover:text-white px-3 py-1.5 text-sm transition-colors">
-                        {c.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
+              <Link key={item.name} href={item.href} onClick={() => setOpen(false)}
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                  pathname === item.href ? 'text-yellow-400' : 'text-gray-200 hover:text-white'
+                }`}>
+                {item.name}
+              </Link>
             ))}
             <div className="pt-3 border-t border-white/10">
               <a href="tel:07810413488"

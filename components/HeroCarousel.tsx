@@ -3,9 +3,8 @@ import { useState, useEffect } from 'react'
 
 const slides = [
   { src: '/van.jpg', alt: 'ARC Electrical & Gas company van' },
-  { src: '/lightbulbs.jpg', alt: 'Electrical services — lighting and installation work' },
-  // FIX 2: replaced flames.jpg with new blue-flame photo
-  { src: '/flames-new.png', alt: 'Gas services — boiler and gas engineer work' },
+  { src: '/old-lightbulbs.jpg', alt: 'Electrical services — lighting and installation work' },
+  { src: '/old-flame-bg.jpg', alt: 'Gas services — boiler and gas engineer work' },
 ]
 
 export default function HeroCarousel() {
@@ -19,11 +18,6 @@ export default function HeroCarousel() {
 
   return (
     <div>
-      {/*
-        Full-bleed edge-to-edge on mobile, tablet and laptop (below 2xl):
-        • No border radius / shadow until 2xl
-        • Only at 2xl+ (split grid with text) does it become a boxed, rounded panel
-      */}
       <div className="relative overflow-hidden h-72 sm:h-80 md:h-96 2xl:rounded-2xl 2xl:shadow-2xl 2xl:h-[26rem] bg-navy-800">
         {slides.map((s, i) => (
           // eslint-disable-next-line @next/next/no-img-element
@@ -36,9 +30,11 @@ export default function HeroCarousel() {
             }`}
           />
         ))}
+        {/* Dark overlay for text readability — matches old site's dimmed/faded look */}
+        <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      {/* Dots — image is edge-to-edge below 2xl, so pad these back in */}
+      {/* Dots */}
       <div className="flex justify-center gap-2.5 mt-4 px-4 sm:px-6 2xl:px-0">
         {slides.map((s, i) => (
           <button
@@ -53,7 +49,7 @@ export default function HeroCarousel() {
         ))}
       </div>
 
-      {/* Phone CTA shown alongside the carousel below 2xl; hidden at 2xl+ since the text column has its own */}
+      {/* Phone CTA shown alongside the carousel below 2xl */}
       <a
         href="tel:07810413488"
         className="2xl:hidden mt-5 mx-4 sm:mx-6 flex items-center justify-center gap-3 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-6 py-4 rounded-xl text-xl shadow-lg transition-colors"

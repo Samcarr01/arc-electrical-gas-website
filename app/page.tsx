@@ -179,20 +179,19 @@ export default function HomePage() {
             {/* ── Gas card ── */}
             <div className="bg-gray-50 rounded-2xl overflow-hidden border border-gray-100">
 
-              {/* Card header — Task 7: light-blue flame on navy */}
+              {/* Card header — logo-style flame on navy */}
               <div className="h-48 relative overflow-hidden bg-gradient-to-br from-navy-800 to-navy">
-                <svg className="absolute -right-5 -bottom-7 w-48 h-48" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.05)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+                <svg className="absolute -right-5 -bottom-7 w-48 h-48 text-white/5" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C8 8 5 11.5 5 15a7 7 0 0 0 14 0c0-3.5-3-7-7-13zm0 17.5A2.5 2.5 0 0 1 9.5 17c0-1.1.9-2 2.5-2s2.5.9 2.5 2a2.5 2.5 0 0 1-2.5 2.5z"/>
+                  <path d="M12 2l-1 1C7.5 7.5 5 11 5 15a7 7 0 0 0 14 0c0-4-2.5-7.5-6-12l-1-1z" fill="currentColor" opacity="0.3"/>
                 </svg>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="flex items-center gap-3">
-                    {/* Flame icon:
-                        - Outer: pointed tip at top, widest belly at mid-height, POINTED BASE
-                          (both ends taper = unmistakably a flame, not a water droplet)
-                        - Inner notch: large split at the tip (evenodd) = classic twin-tongue look */}
-                    <div className="bg-navy border-2 border-[#7EC8E3] rounded-xl p-2.5">
-                      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="#7EC8E3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/>
+                    {/* Logo-style flame icon with pointed top, wide belly, tapered bottom */}
+                    <div className="bg-navy border-2 border-[#FF6B35] rounded-xl p-2.5">
+                      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="none" stroke="#FF6B35" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M12 2C7 9 4 12.5 4 16a8 8 0 0 0 16 0c0-3.5-3-6.5-8-14z"/>
+                        <path d="M12 2l-1 1.5C7 8 5 11.5 5 15a7 7 0 0 0 14 0c0-3.5-2-7-6-11.5L12 2z" fill="#FF6B35" fillOpacity="0.3"/>
                       </svg>
                     </div>
                     <h3 className="text-2xl font-bold text-white">Gas Services</h3>
@@ -235,7 +234,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Why choose us + van photo ── */}
+      {/* ── Why choose us + van + gas photos side-by-side (like old site) ── */}
       <section className="py-20 bg-navy text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -259,20 +258,27 @@ export default function HomePage() {
                   </div>
                 ))}
               </div>
-              {/* Task 5 — extra phone link in Why Choose Us section */}
               <a href="tel:07810413488" className="mt-8 inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-6 py-3 rounded-xl transition-colors">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
                 Call 07810 413488
               </a>
             </div>
-            {/* Van photo */}
-            <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/van-2.jpg" alt="ARC Electrical & Gas company van — 100% electric, Gas Safe & NAPIT registered" className="w-full h-80 object-cover" />
+            {/* Photos side-by-side: van + gas (like old site hero layout) */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="relative">
+                <div className="rounded-2xl overflow-hidden shadow-2xl">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/van-2.jpg" alt="ARC Electrical & Gas company van — 100% electric, Gas Safe & NAPIT registered" className="w-full h-80 object-cover" />
+                </div>
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-yellow-400 text-gray-900 rounded-xl px-4 py-3 font-bold text-sm shadow-lg">
-                5.0 &#11088; Google &middot; 12 Reviews
+              <div className="relative">
+                <div className="rounded-2xl overflow-hidden shadow-2xl">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src="/old-flame-bg.jpg" alt="Gas services — Gas Safe registered boiler and gas engineer" className="w-full h-80 object-cover" />
+                </div>
+                <div className="absolute -bottom-4 -left-4 bg-yellow-400 text-gray-900 rounded-xl px-4 py-3 font-bold text-sm shadow-lg">
+                  5.0 &#11088; Google &middot; 12 Reviews
+                </div>
               </div>
             </div>
           </div>

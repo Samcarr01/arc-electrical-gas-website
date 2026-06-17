@@ -65,6 +65,23 @@ export default function GasServicesPage() {
 
       <TrustBadges />
 
+      {/* ── Prominent accreditation logos row ── */}
+      <section className="py-12 bg-gray-50 border-y border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-sm font-semibold uppercase tracking-widest text-gray-500 mb-8">
+            Fully Accredited &amp; Certified
+          </p>
+          <div className="flex items-center justify-center gap-10 sm:gap-16 flex-wrap">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logos/napit.png" alt="NAPIT Part P Approved Electrician" className="h-20 sm:h-24 w-auto object-contain" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logos/gas-safe.png" alt="Gas Safe Registered" className="h-20 sm:h-24 w-auto object-contain" />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logos/worcester-bosch.png" alt="Worcester Bosch Accredited Installer" className="h-20 sm:h-24 w-auto object-contain" />
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
