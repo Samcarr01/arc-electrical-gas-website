@@ -2,33 +2,24 @@
 
 import { useEffect, useState } from 'react'
 
-type HeroSlide =
-  | {
-      type: 'joined-van-gas'
-      key: string
-      alt: string
-    }
-  | {
-      type: 'image'
-      key: string
-      src: string
-      alt: string
-    }
+type HeroSlide = {
+  key: string
+  src: string
+  alt: string
+}
 
 const slides: HeroSlide[] = [
   {
-    type: 'joined-van-gas',
-    key: 'joined-van-gas',
-    alt: 'ARC Electrical & Gas company van beside gas flame services image',
+    key: 'old-van-gas-combined',
+    src: '/old-elec-bg.jpg',
+    alt: 'ARC Electrical & Gas company van connected with gas flame services image',
   },
   {
-    type: 'image',
     key: 'old-lightbulbs',
     src: '/old-lightbulbs.jpg',
     alt: 'Electrical services — lightbulbs and lighting installation work',
   },
   {
-    type: 'image',
     key: 'old-flame-bg',
     src: '/old-flame-bg.jpg',
     alt: 'Gas services — Gas Safe boiler and gas engineer work',
@@ -59,33 +50,12 @@ export default function HeroCarousel() {
               i === current ? 'opacity-100' : 'opacity-0'
             }`}
           >
-            {slide.type === 'joined-van-gas' ? (
-              <div className="grid grid-cols-2 gap-0 h-full w-full">
-                <div className="relative h-full min-w-0 overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/van.jpg"
-                    alt="ARC Electrical & Gas company van — 100% electric, Gas Safe and NAPIT registered"
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                </div>
-                <div className="relative h-full min-w-0 overflow-hidden">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src="/old-flame-bg.jpg"
-                    alt="Gas flame image for ARC Electrical & Gas services"
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-            ) : (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={slide.src}
-                alt={slide.alt}
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-            )}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={slide.src}
+              alt={slide.alt}
+              className="absolute inset-0 w-full h-full object-cover"
+            />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
           </div>
         ))}
