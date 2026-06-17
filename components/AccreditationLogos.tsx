@@ -6,7 +6,7 @@ const logos = [
 
 export default function AccreditationLogos() {
   return (
-    <section className="py-8 bg-white border-b border-gray-100">
+    <section className="py-10 bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <p className="text-center text-xs font-semibold uppercase tracking-widest text-gray-400 mb-6">
           Trusted &amp; Accredited
@@ -18,7 +18,7 @@ export default function AccreditationLogos() {
               key={l.src}
               src={l.src}
               alt={l.alt}
-              className="h-20 sm:h-24 w-auto object-contain"
+              className="h-24 sm:h-28 w-auto object-contain"
             />
           ))}
         </div>
