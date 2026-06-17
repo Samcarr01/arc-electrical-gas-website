@@ -154,7 +154,6 @@ export default function HomePage() {
                   className="absolute inset-0"
                   style={{ backgroundImage: "url('/img/electrical-service-chris-fuse-board.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
                 />
-                <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
                 <div className="relative z-10">
                   <div className="space-y-2.5 mb-6">
                     {elServices.map(s => (
@@ -205,7 +204,6 @@ export default function HomePage() {
                   className="absolute inset-0"
                   style={{ backgroundImage: "url('/img/gas-service-boiler-engineer.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
                 />
-                <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
                 <div className="relative z-10">
                   <div className="space-y-2.5 mb-6">
                     {gasServices.map(s => (
@@ -263,22 +261,14 @@ export default function HomePage() {
                 Call 07810 413488
               </a>
             </div>
-            {/* Photos side-by-side: van + gas (like old site hero layout) */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="relative">
-                <div className="rounded-2xl overflow-hidden shadow-2xl">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/van-2.jpg" alt="ARC Electrical & Gas company van — 100% electric, Gas Safe & NAPIT registered" className="w-full h-80 object-cover" />
-                </div>
+            {/* Full-screen van photo */}
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/van-2.jpg" alt="ARC Electrical & Gas company van — 100% electric, Gas Safe & NAPIT registered" className="w-full h-80 sm:h-96 object-cover" />
               </div>
-              <div className="relative">
-                <div className="rounded-2xl overflow-hidden shadow-2xl">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src="/old-flame-bg.jpg" alt="Gas services — Gas Safe registered boiler and gas engineer" className="w-full h-80 object-cover" />
-                </div>
-                <div className="absolute -bottom-4 -left-4 bg-yellow-400 text-gray-900 rounded-xl px-4 py-3 font-bold text-sm shadow-lg">
-                  5.0 &#11088; Google &middot; 12 Reviews
-                </div>
+              <div className="absolute -bottom-4 -left-4 bg-yellow-400 text-gray-900 rounded-xl px-4 py-3 font-bold text-sm shadow-lg">
+                5.0 &#11088; Google &middot; 12 Reviews
               </div>
             </div>
           </div>

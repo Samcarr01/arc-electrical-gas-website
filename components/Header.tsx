@@ -21,8 +21,39 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 md:h-24 relative">
 
-          {/* Logo — always left-aligned */}
-          <Link href="/" className="flex-shrink-0">
+          {/* Left group: hamburger (mobile) + desktop nav */}
+          <div className="flex items-center gap-1">
+            {/* Mobile hamburger — md:hidden only */}
+            <button onClick={() => setOpen(!open)}
+              className="md:hidden text-white p-2 rounded-md hover:bg-white/10 transition-colors" aria-label="Toggle menu">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {open
+                  ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                }
+              </svg>
+            </button>
+
+            {/* Desktop nav — inline across the top, visible on md+ */}
+            <nav className="hidden md:flex items-center gap-1">
+              {nav.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className={`text-sm font-medium px-3 py-2 rounded-md transition-colors whitespace-nowrap ${
+                    pathname === item.href
+                      ? 'text-yellow-400'
+                      : 'text-gray-200 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* Logo — always centred at ALL sizes */}
+          <Link href="/" className="absolute left-1/2 -translate-x-1/2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={LOGO_DATA_URL}
@@ -31,25 +62,15 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop nav — inline across the top, visible on md+ */}
-          <nav className="hidden md:flex items-center gap-1">
-            {nav.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`text-sm font-medium px-3 py-2 rounded-md transition-colors whitespace-nowrap ${
-                  pathname === item.href
-                    ? 'text-yellow-400'
-                    : 'text-gray-200 hover:text-white hover:bg-white/10'
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-
-          {/* Right: social + phone + mobile toggle */}
+          {/* Right: social + phone */}
           <div className="flex items-center gap-2 md:gap-3">
+            {/* Mobile phone icon — visible only on mobile (md:hidden) */}
+            <a href="tel:07810413488"
+              className="md:hidden text-white p-2 rounded-md hover:bg-white/10 transition-colors" aria-label="Call 07810 413488">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
+            </a>
+
+            {/* Social icons — hidden on mobile */}
             <a href="https://www.facebook.com/arcelectricalandgas" target="_blank" rel="noopener noreferrer"
               aria-label="Follow ARC Electrical & Gas on Facebook"
               className="hidden md:inline-flex items-center justify-center w-10 h-10 rounded-lg text-blue-200 hover:text-white hover:bg-white/10 transition-colors">
@@ -61,22 +82,12 @@ export default function Header() {
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             </a>
 
+            {/* Desktop phone CTA button */}
             <a href="tel:07810413488"
               className="hidden md:inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-4 py-2.5 rounded-lg transition-colors text-sm">
               <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
               07810 413488
             </a>
-
-            {/* Mobile hamburger — md:hidden only */}
-            <button onClick={() => setOpen(!open)}
-              className="md:hidden text-white p-2 rounded-md hover:bg-white/10 transition-colors" aria-label="Toggle menu">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {open
-                  ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                }
-              </svg>
-            </button>
           </div>
         </div>
 
