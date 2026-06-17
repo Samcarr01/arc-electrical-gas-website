@@ -12,7 +12,7 @@ export default function ElectricianSherburnInElmetPage() {
     <LocationPageTemplate
       town="Sherburn in Elmet"
       serviceType="electrician"
-      intro="ARC Electrical & Gas provide professional electrical services throughout Sherburn in Elmet and the surrounding LS25 area. We are NAPIT approved and Part P accredited, with over 20 years of experience serving homes and businesses across this North Yorkshire market town. All work is fully insured and certified on completion."
+      intro="ARC Electrical & Gas provide professional electrical services throughout Sherburn in Elmet and the surrounding LS25 area. We are NAPIT approved and Part P accredited, with over 20 years of experience serving homes and businesses across this West Yorkshire market town. All work is fully insured and certified on completion."
       services={[
         'Electrical fault finding and diagnosis',
         'EICR — Electrical Installation Condition Reports',

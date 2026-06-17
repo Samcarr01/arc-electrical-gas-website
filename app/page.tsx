@@ -68,22 +68,22 @@ export default function HomePage() {
     <>
       {/* ── Hero ── */}
       <section className="bg-navy">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-28">
-          {/*
-            Mobile:  carousel first (order-1), then text (order-2)
-            Desktop: text left (lg:order-1), carousel right (lg:order-2)
-          */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        {/*
+          Carousel spans edge-to-edge full width on mobile, tablet and laptop (below 2xl) —
+          the wrapping div has no max-width/padding until 2xl, so the carousel breaks out of
+          any container constraint. Only at 2xl+ does it sit boxed inside the split grid below.
+          Text gets its own horizontal padding below 2xl since the container padding is gone.
+        */}
+        <div className="2xl:max-w-7xl 2xl:mx-auto 2xl:px-8 py-12 md:py-16 2xl:py-28">
+          <div className="grid grid-cols-1 2xl:grid-cols-2 gap-8 2xl:gap-12 items-center">
 
-            {/* Carousel — mobile: top; desktop: right
-                FIX 5: negative margins on mobile break out of the px-4/px-6 container
-                so the image goes full-bleed edge-to-edge. Reset to mx-0 on lg+. */}
-            <div className="order-1 lg:order-2 -mx-4 sm:-mx-6 lg:mx-0">
+            {/* Carousel — mobile/tablet/laptop: top, full-bleed; 2xl+: right, boxed */}
+            <div className="order-1 2xl:order-2">
               <HeroCarousel />
             </div>
 
-            {/* Text — mobile: below carousel; desktop: left */}
-            <div className="order-2 lg:order-1">
+            {/* Text — mobile/tablet/laptop: below carousel; 2xl+: left */}
+            <div className="order-2 2xl:order-1 px-4 sm:px-6 2xl:px-0">
               <div className="inline-flex items-center gap-2 bg-yellow-400/20 text-yellow-300 text-sm font-medium px-3 py-1.5 rounded-full mb-6">
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" /></svg>
                 NAPIT &amp; Gas Safe Registered &middot; 5.0 &#11088; on Google
@@ -148,33 +148,30 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Card body — FIX 4: consumer-unit circuit-breaker photo at ~45% visibility */}
+              {/* Card body — Chris's fuse board photo, dark blur overlay for white text */}
               <div className="p-8 relative overflow-hidden">
                 <div
                   className="absolute inset-0"
-                  style={{ backgroundImage: "url('/img/consumer-unit-bg.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                  style={{ backgroundImage: "url('/img/electrical-service-chris-fuse-board.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
                 />
-                {/* Overlay at 55% opacity → ~45% of photo shows through */}
-                <div className="absolute inset-0 bg-gray-50/[0.55]" />
+                <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
                 <div className="relative z-10">
                   <div className="space-y-2.5 mb-6">
                     {elServices.map(s => (
                       <div key={s.name} className="flex items-start gap-3">
-                        {/* FIX 1: dark tick for readability over background image */}
-                        <svg className="w-4 h-4 text-[#111111] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                        <div><span className="font-semibold text-[#111111] text-sm">{s.name}</span><span className="text-gray-800 text-sm"> &mdash; {s.desc}</span></div>
+                        <svg className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                        <div><span className="font-semibold text-white text-sm">{s.name}</span><span className="text-white/80 text-sm"> &mdash; {s.desc}</span></div>
                       </div>
                     ))}
                   </div>
 
-                  {/* Task 3: NAPIT 27992 logo */}
-                  <div className="border-t border-gray-200 pt-4 mb-5 flex items-center gap-4">
+                  <div className="border-t border-white/20 pt-4 mb-5 flex items-center gap-4">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src="/logos/napit-27992.png" alt="NAPIT Part P Approved Electrician No. 27992" className="h-16 w-auto object-contain flex-shrink-0" />
-                    <p className="text-xs text-gray-800 leading-snug font-medium">NAPIT Part P Approved<br />Electrician No. 27992</p>
+                    <p className="text-xs text-white/80 leading-snug font-medium">NAPIT Part P Approved<br />Electrician No. 27992</p>
                   </div>
 
-                  <Link href="/electrical-services" className="inline-flex items-center gap-2 bg-navy hover:bg-navy-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors">View All Electrical Services &rarr;</Link>
+                  <Link href="/electrical-services" className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-semibold px-6 py-3 rounded-lg transition-colors">View All Electrical Services &rarr;</Link>
                 </div>
               </div>
             </div>
@@ -203,34 +200,29 @@ export default function HomePage() {
                 </div>
               </div>
 
-              {/* Card body — FIX 2: boiler/heating photo background.
-                  TODO for Chris: replace /img/boiler.jpg with a real boiler photo (e.g. a Worcester Bosch install)
-                  by dropping the file into /public/img/ and updating this path */}
+              {/* Card body — boiler engineer photo, dark blur overlay for white text */}
               <div className="p-8 relative overflow-hidden">
                 <div
                   className="absolute inset-0"
-                  style={{ backgroundImage: "url('/img/boiler-service.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
+                  style={{ backgroundImage: "url('/img/gas-service-boiler-engineer.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
                 />
-                {/* Overlay at 55% opacity → ~45% of photo shows through */}
-                <div className="absolute inset-0 bg-gray-50/[0.55]" />
+                <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
                 <div className="relative z-10">
                   <div className="space-y-2.5 mb-6">
                     {gasServices.map(s => (
                       <div key={s.name} className="flex items-start gap-3">
-                        {/* FIX 1: dark tick for readability over background image */}
-                        <svg className="w-4 h-4 text-[#111111] flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
-                        <div><span className="font-semibold text-[#111111] text-sm">{s.name}</span><span className="text-gray-800 text-sm"> &mdash; {s.desc}</span></div>
+                        <svg className="w-4 h-4 text-yellow-400 flex-shrink-0 mt-1" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
+                        <div><span className="font-semibold text-white text-sm">{s.name}</span><span className="text-white/80 text-sm"> &mdash; {s.desc}</span></div>
                       </div>
                     ))}
                   </div>
 
-                  {/* Task 4: Gas Safe logo + reg number */}
-                  <div className="border-t border-gray-200 pt-4 mb-5 flex items-center gap-4">
+                  <div className="border-t border-white/20 pt-4 mb-5 flex items-center gap-4">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src="/logos/gas-safe.png" alt="Gas Safe Register" className="h-16 w-auto object-contain flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-[#111111] text-sm">Gas Safe Registered</p>
-                      <p className="text-gray-800 text-sm">Reg. No. <strong className="text-[#111111]">584102</strong></p>
+                      <p className="font-semibold text-white text-sm">Gas Safe Registered</p>
+                      <p className="text-white/80 text-sm">Reg. No. <strong className="text-white">584102</strong></p>
                     </div>
                   </div>
 

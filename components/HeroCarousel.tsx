@@ -20,13 +20,11 @@ export default function HeroCarousel() {
   return (
     <div>
       {/*
-        FIX 5 — Full-bleed on mobile:
-        • No border radius on mobile (rounded-none), only on lg+
-        • No shadow on mobile (shadow-2xl only on lg+)
-        • Parent in page.tsx uses -mx-4 sm:-mx-6 lg:mx-0 to break out of padding
-        • h-72 on mobile gives a tall full-bleed image
+        Full-bleed edge-to-edge on mobile, tablet and laptop (below 2xl):
+        • No border radius / shadow until 2xl
+        • Only at 2xl+ (split grid with text) does it become a boxed, rounded panel
       */}
-      <div className="relative overflow-hidden h-72 sm:h-80 lg:rounded-2xl lg:shadow-2xl lg:h-[26rem] bg-navy-800">
+      <div className="relative overflow-hidden h-72 sm:h-80 md:h-96 2xl:rounded-2xl 2xl:shadow-2xl 2xl:h-[26rem] bg-navy-800">
         {slides.map((s, i) => (
           // eslint-disable-next-line @next/next/no-img-element
           <img
@@ -40,8 +38,8 @@ export default function HeroCarousel() {
         ))}
       </div>
 
-      {/* Dots — add side padding back on mobile (parent has negative margins) */}
-      <div className="flex justify-center gap-2.5 mt-4 px-4 lg:px-0">
+      {/* Dots — image is edge-to-edge below 2xl, so pad these back in */}
+      <div className="flex justify-center gap-2.5 mt-4 px-4 sm:px-6 2xl:px-0">
         {slides.map((s, i) => (
           <button
             key={s.src}
@@ -55,10 +53,10 @@ export default function HeroCarousel() {
         ))}
       </div>
 
-      {/* Mobile-only phone CTA — add side margins back since parent has negative margins */}
+      {/* Phone CTA shown alongside the carousel below 2xl; hidden at 2xl+ since the text column has its own */}
       <a
         href="tel:07810413488"
-        className="lg:hidden mt-5 mx-4 sm:mx-6 lg:mx-0 flex items-center justify-center gap-3 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-6 py-4 rounded-xl text-xl shadow-lg transition-colors"
+        className="2xl:hidden mt-5 mx-4 sm:mx-6 flex items-center justify-center gap-3 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-6 py-4 rounded-xl text-xl shadow-lg transition-colors"
       >
         <svg className="w-6 h-6 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
           <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
