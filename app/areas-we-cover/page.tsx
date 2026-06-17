@@ -13,7 +13,7 @@ const primaryAreas = [
   { name: 'Garforth', desc: 'Larger town in LS25, with a mix of residential and commercial properties.', electricHref: '/electrician-garforth', gasHref: '/gas-engineer-garforth' },
   { name: 'Allerton Bywater', desc: 'Village on the River Aire, between Kippax and Castleford.', electricHref: '/electrician-allerton-bywater', gasHref: '/gas-engineer-allerton-bywater' },
   { name: 'Micklefield', desc: 'Village in the LS25 area between Garforth and Sherburn in Elmet.', electricHref: '/electrician-micklefield', gasHref: '/gas-engineer-micklefield' },
-  { name: 'Sherburn in Elmet', desc: 'Market town in North Yorkshire, south-east of Leeds.', electricHref: '/electrician-sherburn-in-elmet', gasHref: '/gas-engineer-sherburn-in-elmet' },
+  { name: 'Sherburn in Elmet', desc: 'Market town in West Yorkshire, south-east of Leeds.', electricHref: '/electrician-sherburn-in-elmet', gasHref: '/gas-engineer-sherburn-in-elmet' },
   { name: 'South Milford', desc: 'Village between Sherburn in Elmet and Selby in the LS25 area.', electricHref: '/electrician-south-milford', gasHref: '/gas-engineer-south-milford' },
   { name: 'Castleford', desc: 'West Yorkshire town, close to Kippax and Allerton Bywater.', electricHref: '/electrician-castleford', gasHref: '/gas-engineer-castleford' },
   { name: 'Fairburn', desc: 'Small village near Castleford and Kippax in the LS25 area.', electricHref: '/electrician-fairburn', gasHref: '/gas-engineer-fairburn' },
@@ -32,7 +32,7 @@ export default function AreasPage() {
               <span className="text-yellow-400">Areas We Cover</span>
             </nav>
             <h1 className="text-4xl md:text-5xl font-bold mb-5">Areas We Cover</h1>
-            <p className="text-xl text-blue-100 mb-8 leading-relaxed">ARC Electrical &amp; Gas provide electrical and gas services across Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, South Milford, Castleford, Fairburn and surrounding areas of West and South Yorkshire.</p>
+            <p className="text-xl text-blue-100 mb-8 leading-relaxed">ARC Electrical &amp; Gas provide electrical and gas services across Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, South Milford, Castleford, Fairburn and surrounding areas of West Yorkshire.</p>
             <a href="tel:07810413488" className="inline-flex items-center justify-center gap-2 bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-bold px-8 py-4 rounded-xl transition-colors text-lg">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
               Check if we cover your area: 07810 413488

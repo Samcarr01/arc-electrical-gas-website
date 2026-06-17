@@ -27,15 +27,15 @@ export default function Header() {
     <header className="bg-navy sticky top-0 z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/*
-          FIX 1 — Logo:
-          Mobile:  absolute-centred, 170px wide
-          Desktop: static in flow on the left, h-16
+          Logo:
+          Below 2xl (mobile/tablet/laptop): absolute-centred, 170px wide
+          2xl+: static in flow on the left, h-16
           Use relative on the row so absolute positioning is contained.
         */}
         <div className="flex items-center justify-between h-20 md:h-24 relative">
 
-          {/* Desktop-only logo — left-aligned, in normal flow */}
-          <Link href="/" className="hidden lg:flex flex-shrink-0">
+          {/* 2xl+ only logo — left-aligned, in normal flow */}
+          <Link href="/" className="hidden 2xl:flex flex-shrink-0">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={LOGO_DATA_URL}
@@ -44,8 +44,8 @@ export default function Header() {
             />
           </Link>
 
-          {/* Mobile-only logo — absolutely centred */}
-          <Link href="/" className="lg:hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          {/* Below 2xl logo — absolutely centred */}
+          <Link href="/" className="2xl:hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={LOGO_DATA_URL}
@@ -55,8 +55,8 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-1">
+          {/* Desktop nav — only at 2xl+ */}
+          <nav className="hidden 2xl:flex items-center gap-1">
             {nav.map((item) => (
               <div key={item.name} className="relative group">
                 <Link
@@ -103,7 +103,7 @@ export default function Header() {
             </a>
 
             <button onClick={() => setOpen(!open)}
-              className="lg:hidden text-white p-2 rounded-md hover:bg-white/10 transition-colors" aria-label="Toggle menu">
+              className="2xl:hidden text-white p-2 rounded-md hover:bg-white/10 transition-colors" aria-label="Toggle menu">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {open
                   ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -115,7 +115,7 @@ export default function Header() {
         </div>
 
         {open && (
-          <div className="lg:hidden border-t border-white/10 py-4 space-y-1">
+          <div className="2xl:hidden border-t border-white/10 py-4 space-y-1">
             {nav.map((item) => (
               <div key={item.name}>
                 <Link href={item.href} onClick={() => setOpen(false)}
