@@ -14,10 +14,22 @@ export default function ContactForm() {
     e.preventDefault()
     setStatus('sending')
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://formspree.io/f/mqerbwqg', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: 'New Enquiry — ARC Electrical & Gas Website',
+          _replyto: form.email,
+          name: form.name,
+          email: form.email,
+          phone: form.phone,
+          service: form.service,
+          location: form.location,
+          message: form.message,
+        }),
       })
       setStatus(res.ok ? 'success' : 'error')
     } catch { setStatus('error') }
