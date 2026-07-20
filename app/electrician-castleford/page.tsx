@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: 'Electrician in Castleford | ARC Electrical & Gas',
   description: 'Looking for an electrician in Castleford? ARC Electrical & Gas are NAPIT & Part P accredited with 20+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
   alternates: { canonical: '/electrician-castleford' },
+  openGraph: {
+    title: 'Electrician in Castleford | ARC Electrical & Gas',
+    description: 'NAPIT & Part P accredited electrician in Castleford. EICR, fuse boards, sockets, lighting. Call 07810 413488.',
+    url: '/electrician-castleford',
+  },
+  twitter: {
+    title: 'Electrician in Castleford | ARC Electrical & Gas',
+    description: 'NAPIT & Part P accredited electrician in Castleford. EICR, fuse boards, sockets, lighting. Call 07810 413488.',
+  },
 }
 
 export default function ElectricianCastlefordPage() {

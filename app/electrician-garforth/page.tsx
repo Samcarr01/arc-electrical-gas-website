@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: 'Electrician in Garforth | ARC Electrical & Gas',
   description: 'Looking for an electrician in Garforth? ARC Electrical & Gas are NAPIT & Part P accredited with 20+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
   alternates: { canonical: '/electrician-garforth' },
+  openGraph: {
+    title: 'Electrician in Garforth | ARC Electrical & Gas',
+    description: 'NAPIT & Part P accredited electrician in Garforth. EICR, fuse boards, sockets, lighting. 20+ years experience. Call 07810 413488.',
+    url: '/electrician-garforth',
+  },
+  twitter: {
+    title: 'Electrician in Garforth | ARC Electrical & Gas',
+    description: 'NAPIT & Part P accredited electrician in Garforth. EICR, fuse boards, sockets, lighting. 20+ years experience. Call 07810 413488.',
+  },
 }
 
 export default function ElectricianGarforthPage() {

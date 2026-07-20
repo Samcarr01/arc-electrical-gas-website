@@ -4,9 +4,18 @@ import CTABanner from '@/components/CTABanner'
 import FAQSection from '@/components/FAQSection'
 
 export const metadata: Metadata = {
-  title: 'EICR Testing in Kippax, Garforth & Leeds Area',
+  title: 'EICR Testing in Kippax, Garforth & West Yorkshire',
   description: 'Electrical Installation Condition Reports (EICR) in Kippax, Garforth, Allerton Bywater and Micklefield. NAPIT & Part P accredited. Required for landlords every 5 years. Call 07810 413488.',
   alternates: { canonical: '/eicr' },
+  openGraph: {
+    title: 'EICR Testing in Kippax, Garforth & West Yorkshire',
+    description: 'Electrical Installation Condition Reports for homeowners and landlords. NAPIT & Part P accredited. Call 07810 413488.',
+    url: '/eicr',
+  },
+  twitter: {
+    title: 'EICR Testing in Kippax, Garforth & West Yorkshire',
+    description: 'Electrical Installation Condition Reports for homeowners and landlords. NAPIT & Part P accredited. Call 07810 413488.',
+  },
 }
 
 const faqs = [

@@ -4,9 +4,18 @@ import CTABanner from '@/components/CTABanner'
 import FAQSection from '@/components/FAQSection'
 
 export const metadata: Metadata = {
-  title: 'Landlord Certificates in Kippax, Garforth & Leeds Area',
+  title: 'Landlord Certificates in Kippax, Garforth & West Yorkshire',
   description: 'Landlord EICR and Gas Safety Records (CP12) in Kippax, Garforth, Allerton Bywater and Micklefield. NAPIT & Gas Safe registered. Reports emailed to agents. Call 07810 413488.',
   alternates: { canonical: '/landlord-certificates' },
+  openGraph: {
+    title: 'Landlord Certificates in Kippax, Garforth & West Yorkshire',
+    description: 'Landlord EICR and Gas Safety Records (CP12). NAPIT & Gas Safe registered. Reports emailed to agents. Call 07810 413488.',
+    url: '/landlord-certificates',
+  },
+  twitter: {
+    title: 'Landlord Certificates in Kippax, Garforth & West Yorkshire',
+    description: 'Landlord EICR and Gas Safety Records (CP12). NAPIT & Gas Safe registered. Reports emailed to agents. Call 07810 413488.',
+  },
 }
 
 const faqs = [

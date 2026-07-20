@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: 'Electrician in Micklefield | ARC Electrical & Gas',
   description: 'Local electrician in Micklefield. ARC Electrical & Gas are NAPIT & Part P accredited. EICR, fuse boards, sockets, lighting, landlord certificates. Call 07810 413488.',
   alternates: { canonical: '/electrician-micklefield' },
+  openGraph: {
+    title: 'Electrician in Micklefield | ARC Electrical & Gas',
+    description: 'NAPIT & Part P accredited electrician in Micklefield. EICR, fuse boards, sockets, lighting. Call 07810 413488.',
+    url: '/electrician-micklefield',
+  },
+  twitter: {
+    title: 'Electrician in Micklefield | ARC Electrical & Gas',
+    description: 'NAPIT & Part P accredited electrician in Micklefield. EICR, fuse boards, sockets, lighting. Call 07810 413488.',
+  },
 }
 
 export default function ElectricianMicklefieldPage() {

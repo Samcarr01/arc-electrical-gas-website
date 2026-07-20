@@ -5,9 +5,18 @@ import FAQSection from '@/components/FAQSection'
 import TrustBadges from '@/components/TrustBadges'
 
 export const metadata: Metadata = {
-  title: 'Gas Engineer Services in Kippax, Garforth & Leeds Area',
+  title: 'Gas Engineer Services in Kippax, Garforth & West Yorkshire',
   description: 'Gas Safe registered engineer in Kippax, Garforth, Allerton Bywater, Sherburn in Elmet and Castleford. Boiler servicing, repairs, installation, radiators and gas safety records. Call 07810 413488.',
   alternates: { canonical: '/gas-services' },
+  openGraph: {
+    title: 'Gas Engineer Services in Kippax, Garforth & West Yorkshire',
+    description: 'Gas Safe registered engineer. Boiler servicing, repairs, installation and CP12 certificates. Serving Kippax, Garforth and West Yorkshire. Call 07810 413488.',
+    url: '/gas-services',
+  },
+  twitter: {
+    title: 'Gas Engineer Services in Kippax, Garforth & West Yorkshire',
+    description: 'Gas Safe registered engineer. Boiler servicing, repairs, installation and CP12 certificates. Serving Kippax, Garforth and West Yorkshire. Call 07810 413488.',
+  },
 }
 
 const services = [

@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: 'Gas Engineer in Kippax | ARC Electrical & Gas',
   description: 'Looking for a gas engineer in Kippax? ARC Electrical & Gas are Gas Safe registered & Worcester Bosch accredited. Boiler servicing, repairs, installations and CP12 certificates. Call 07810 413488.',
   alternates: { canonical: '/gas-engineer-kippax' },
+  openGraph: {
+    title: 'Gas Engineer in Kippax | ARC Electrical & Gas',
+    description: 'Gas Safe registered engineer in Kippax. Boiler servicing, repairs, installations and CP12 certificates. Call 07810 413488.',
+    url: '/gas-engineer-kippax',
+  },
+  twitter: {
+    title: 'Gas Engineer in Kippax | ARC Electrical & Gas',
+    description: 'Gas Safe registered engineer in Kippax. Boiler servicing, repairs, installations and CP12 certificates. Call 07810 413488.',
+  },
 }
 
 export default function GasEngineerKippaxPage() {

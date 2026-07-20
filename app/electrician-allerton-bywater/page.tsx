@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: 'Electrician in Allerton Bywater | ARC Electrical & Gas',
   description: 'Local electrician in Allerton Bywater. ARC Electrical & Gas are NAPIT & Part P accredited. EICR, fuse boards, sockets, lighting, landlord certificates. Call 07810 413488.',
   alternates: { canonical: '/electrician-allerton-bywater' },
+  openGraph: {
+    title: 'Electrician in Allerton Bywater | ARC Electrical & Gas',
+    description: 'NAPIT & Part P accredited electrician in Allerton Bywater. EICR, fuse boards, sockets, lighting. Call 07810 413488.',
+    url: '/electrician-allerton-bywater',
+  },
+  twitter: {
+    title: 'Electrician in Allerton Bywater | ARC Electrical & Gas',
+    description: 'NAPIT & Part P accredited electrician in Allerton Bywater. EICR, fuse boards, sockets, lighting. Call 07810 413488.',
+  },
 }
 
 export default function ElectricianAllertonBywaterPage() {

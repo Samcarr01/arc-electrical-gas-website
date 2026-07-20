@@ -5,9 +5,18 @@ import FAQSection from '@/components/FAQSection'
 import TrustBadges from '@/components/TrustBadges'
 
 export const metadata: Metadata = {
-  title: 'Electrical Services in Kippax, Garforth & Leeds Area',
+  title: 'Electrical Services in Kippax, Garforth & West Yorkshire',
   description: 'Professional electrical services in Kippax, Garforth, Allerton Bywater and Micklefield. NAPIT & Part P accredited. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
   alternates: { canonical: '/electrical-services' },
+  openGraph: {
+    title: 'Electrical Services in Kippax, Garforth & West Yorkshire',
+    description: 'NAPIT & Part P accredited electrician. EICR, fuse boards, sockets, lighting. Serving Kippax, Garforth and West Yorkshire. Call 07810 413488.',
+    url: '/electrical-services',
+  },
+  twitter: {
+    title: 'Electrical Services in Kippax, Garforth & West Yorkshire',
+    description: 'NAPIT & Part P accredited electrician. EICR, fuse boards, sockets, lighting. Serving Kippax, Garforth and West Yorkshire. Call 07810 413488.',
+  },
 }
 
 const services = [

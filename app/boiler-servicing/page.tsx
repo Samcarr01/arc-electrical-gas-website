@@ -4,9 +4,18 @@ import CTABanner from '@/components/CTABanner'
 import FAQSection from '@/components/FAQSection'
 
 export const metadata: Metadata = {
-  title: 'Boiler Servicing in Kippax, Garforth & Leeds Area',
+  title: 'Boiler Servicing in Kippax, Garforth & West Yorkshire',
   description: 'Annual boiler servicing by Gas Safe registered engineer in Kippax, Garforth, Allerton Bywater and Micklefield. Worcester Bosch accredited. Electronic service record issued. Call 07810 413488.',
   alternates: { canonical: '/boiler-servicing' },
+  openGraph: {
+    title: 'Boiler Servicing in Kippax, Garforth & West Yorkshire',
+    description: 'Annual boiler servicing by Gas Safe registered, Worcester Bosch accredited engineer. Serving Kippax, Garforth and West Yorkshire. Call 07810 413488.',
+    url: '/boiler-servicing',
+  },
+  twitter: {
+    title: 'Boiler Servicing in Kippax, Garforth & West Yorkshire',
+    description: 'Annual boiler servicing by Gas Safe registered, Worcester Bosch accredited engineer. Serving Kippax, Garforth and West Yorkshire. Call 07810 413488.',
+  },
 }
 
 const checks = [

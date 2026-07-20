@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: 'Gas Engineer in Micklefield | ARC Electrical & Gas',
   description: 'Gas Safe registered engineer in Micklefield. ARC Electrical & Gas. Boiler servicing, repairs, installations and CP12 gas safety records. Call 07810 413488.',
   alternates: { canonical: '/gas-engineer-micklefield' },
+  openGraph: {
+    title: 'Gas Engineer in Micklefield | ARC Electrical & Gas',
+    description: 'Gas Safe registered engineer in Micklefield. Boiler servicing, repairs, installations and CP12 certificates. Call 07810 413488.',
+    url: '/gas-engineer-micklefield',
+  },
+  twitter: {
+    title: 'Gas Engineer in Micklefield | ARC Electrical & Gas',
+    description: 'Gas Safe registered engineer in Micklefield. Boiler servicing, repairs, installations and CP12 certificates. Call 07810 413488.',
+  },
 }
 
 export default function GasEngineerMicklefieldPage() {

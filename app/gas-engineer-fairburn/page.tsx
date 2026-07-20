@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: 'Gas Engineer in Fairburn | ARC Electrical & Gas',
   description: 'Looking for a gas engineer in Fairburn? ARC Electrical & Gas are Gas Safe registered & Worcester Bosch accredited. Boiler servicing, repairs, installations and CP12 certificates. Call 07810 413488.',
   alternates: { canonical: '/gas-engineer-fairburn' },
+  openGraph: {
+    title: 'Gas Engineer in Fairburn | ARC Electrical & Gas',
+    description: 'Gas Safe registered engineer in Fairburn. Boiler servicing, repairs, installations and CP12 certificates. Call 07810 413488.',
+    url: '/gas-engineer-fairburn',
+  },
+  twitter: {
+    title: 'Gas Engineer in Fairburn | ARC Electrical & Gas',
+    description: 'Gas Safe registered engineer in Fairburn. Boiler servicing, repairs, installations and CP12 certificates. Call 07810 413488.',
+  },
 }
 
 export default function GasEngineerFairburnPage() {

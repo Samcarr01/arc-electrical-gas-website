@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: 'Electrician in Fairburn | ARC Electrical & Gas',
   description: 'Looking for an electrician in Fairburn? ARC Electrical & Gas are NAPIT & Part P accredited with 20+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
   alternates: { canonical: '/electrician-fairburn' },
+  openGraph: {
+    title: 'Electrician in Fairburn | ARC Electrical & Gas',
+    description: 'NAPIT & Part P accredited electrician in Fairburn. EICR, fuse boards, sockets, lighting. Call 07810 413488.',
+    url: '/electrician-fairburn',
+  },
+  twitter: {
+    title: 'Electrician in Fairburn | ARC Electrical & Gas',
+    description: 'NAPIT & Part P accredited electrician in Fairburn. EICR, fuse boards, sockets, lighting. Call 07810 413488.',
+  },
 }
 
 export default function ElectricianFairburnPage() {

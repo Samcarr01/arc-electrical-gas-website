@@ -3,9 +3,18 @@ import Link from 'next/link'
 import CTABanner from '@/components/CTABanner'
 
 export const metadata: Metadata = {
-  title: 'Areas We Cover | Electrician & Gas Engineer',
-  description: 'ARC Electrical & Gas cover Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, South Milford, Castleford, Fairburn, Great Preston, Swillington, Selby and surrounding Leeds areas.',
+  title: 'Areas We Cover | Electrician & Gas Engineer in West Yorkshire',
+  description: 'ARC Electrical & Gas cover Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, South Milford, Castleford, Fairburn, Great Preston, Swillington, Selby and surrounding West Yorkshire areas.',
   alternates: { canonical: '/areas-we-cover' },
+  openGraph: {
+    title: 'Areas We Cover | Electrician & Gas Engineer in West Yorkshire',
+    description: 'ARC Electrical & Gas cover Kippax, Garforth, Allerton Bywater, Micklefield and surrounding West Yorkshire areas. Call 07810 413488.',
+    url: '/areas-we-cover',
+  },
+  twitter: {
+    title: 'Areas We Cover | Electrician & Gas Engineer in West Yorkshire',
+    description: 'ARC Electrical & Gas cover Kippax, Garforth, Allerton Bywater, Micklefield and surrounding West Yorkshire areas. Call 07810 413488.',
+  },
 }
 
 const primaryAreas = [

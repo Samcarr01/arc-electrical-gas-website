@@ -4,8 +4,17 @@ import ContactForm from '@/components/ContactForm'
 
 export const metadata: Metadata = {
   title: 'Contact Us | Electrician & Gas Engineer in Kippax, Garforth',
-  description: 'Get in touch with ARC Electrical & Gas. Call 07810 413488 or send a message. We serve Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford and surrounding Leeds areas.',
+  description: 'Get in touch with ARC Electrical & Gas. Call 07810 413488 or send a message. We serve Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford and surrounding West Yorkshire areas.',
   alternates: { canonical: '/contact' },
+  openGraph: {
+    title: 'Contact ARC Electrical & Gas | Kippax, Garforth & West Yorkshire',
+    description: 'Get in touch with ARC Electrical & Gas. Call 07810 413488 or send a message. Serving Kippax, Garforth and West Yorkshire.',
+    url: '/contact',
+  },
+  twitter: {
+    title: 'Contact ARC Electrical & Gas | Kippax, Garforth & West Yorkshire',
+    description: 'Get in touch with ARC Electrical & Gas. Call 07810 413488 or send a message. Serving Kippax, Garforth and West Yorkshire.',
+  },
 }
 
 export default function ContactPage() {

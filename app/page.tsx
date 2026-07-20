@@ -10,6 +10,15 @@ export const metadata: Metadata = {
   title: 'Electrician & Gas Engineer in Kippax, Garforth | ARC Electrical & Gas',
   description: 'ARC Electrical & Gas — trusted local electrician and gas engineer serving Kippax, Garforth, Allerton Bywater, Micklefield, Sherburn in Elmet, Castleford and surrounding Leeds areas. NAPIT & Gas Safe registered. 5.0 Google rating. Call 07810 413488.',
   alternates: { canonical: '/' },
+  openGraph: {
+    title: 'Electrician & Gas Engineer in Kippax, Garforth | ARC Electrical & Gas',
+    description: 'Trusted local electrician and gas engineer serving Kippax, Garforth and West Yorkshire. NAPIT & Gas Safe registered. Call 07810 413488.',
+    url: '/',
+  },
+  twitter: {
+    title: 'Electrician & Gas Engineer in Kippax, Garforth | ARC Electrical & Gas',
+    description: 'Trusted local electrician and gas engineer serving Kippax, Garforth and West Yorkshire. NAPIT & Gas Safe registered. Call 07810 413488.',
+  },
 }
 
 const elServices = [

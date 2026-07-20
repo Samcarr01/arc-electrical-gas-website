@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: 'Gas Engineer in South Milford | ARC Electrical & Gas',
   description: 'Looking for a gas engineer in South Milford? ARC Electrical & Gas are Gas Safe registered & Worcester Bosch accredited. Boiler servicing, repairs, installations and CP12 certificates. Call 07810 413488.',
   alternates: { canonical: '/gas-engineer-south-milford' },
+  openGraph: {
+    title: 'Gas Engineer in South Milford | ARC Electrical & Gas',
+    description: 'Gas Safe registered engineer in South Milford. Boiler servicing, repairs, installations and CP12 certificates. Call 07810 413488.',
+    url: '/gas-engineer-south-milford',
+  },
+  twitter: {
+    title: 'Gas Engineer in South Milford | ARC Electrical & Gas',
+    description: 'Gas Safe registered engineer in South Milford. Boiler servicing, repairs, installations and CP12 certificates. Call 07810 413488.',
+  },
 }
 
 export default function GasEngineerSouthMilfordPage() {

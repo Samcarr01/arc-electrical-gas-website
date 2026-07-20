@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: 'Electrician in South Milford | ARC Electrical & Gas',
   description: 'Looking for an electrician in South Milford? ARC Electrical & Gas are NAPIT & Part P accredited with 20+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
   alternates: { canonical: '/electrician-south-milford' },
+  openGraph: {
+    title: 'Electrician in South Milford | ARC Electrical & Gas',
+    description: 'NAPIT & Part P accredited electrician in South Milford. EICR, fuse boards, sockets, lighting. Call 07810 413488.',
+    url: '/electrician-south-milford',
+  },
+  twitter: {
+    title: 'Electrician in South Milford | ARC Electrical & Gas',
+    description: 'NAPIT & Part P accredited electrician in South Milford. EICR, fuse boards, sockets, lighting. Call 07810 413488.',
+  },
 }
 
 export default function ElectricianSouthMilfordPage() {

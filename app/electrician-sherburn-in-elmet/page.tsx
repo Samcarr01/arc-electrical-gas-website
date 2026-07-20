@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: 'Electrician in Sherburn in Elmet | ARC Electrical & Gas',
   description: 'Looking for an electrician in Sherburn in Elmet? ARC Electrical & Gas are NAPIT & Part P accredited with 20+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
   alternates: { canonical: '/electrician-sherburn-in-elmet' },
+  openGraph: {
+    title: 'Electrician in Sherburn in Elmet | ARC Electrical & Gas',
+    description: 'NAPIT & Part P accredited electrician in Sherburn in Elmet. EICR, fuse boards, sockets, lighting. Call 07810 413488.',
+    url: '/electrician-sherburn-in-elmet',
+  },
+  twitter: {
+    title: 'Electrician in Sherburn in Elmet | ARC Electrical & Gas',
+    description: 'NAPIT & Part P accredited electrician in Sherburn in Elmet. EICR, fuse boards, sockets, lighting. Call 07810 413488.',
+  },
 }
 
 export default function ElectricianSherburnInElmetPage() {
