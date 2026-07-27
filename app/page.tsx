@@ -335,6 +335,40 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── Meet the Marketing Managers ── */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Image — cropped to focus on dogs, shirts, ball, flowers */}
+            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/marketing-managers.jpg"
+                alt="Two dogs wearing branded ARC Electrical and Gas work shirts in Leeds"
+                className="w-full h-[400px] sm:h-[500px] object-cover object-[center_35%]"
+              />
+            </div>
+
+            {/* Text */}
+            <div>
+              <div className="inline-flex items-center gap-2 bg-yellow-400/10 text-navy text-sm font-medium px-3 py-1.5 rounded-full mb-4">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                </svg>
+                Family Business
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Meet the Marketing Managers</h2>
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                The four-legged members of the ARC family. They may not wire a socket or service a boiler, but they are always on brand.
+              </p>
+              <p className="text-gray-600">
+                We&apos;re a family-run business based in the Leeds area. When you call ARC, you&apos;re speaking directly to the person who will carry out your work &mdash; no call centres, no outsourcing, just honest local service you can trust.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <FAQSection faqs={faqs} title="Common Questions" />
 
       <CTABanner
