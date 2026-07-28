@@ -55,12 +55,6 @@ const schema = {
     { '@type': 'EducationalOccupationalCredential', name: 'Worcester Bosch Accredited Installer' },
   ],
   identifier: { '@type': 'PropertyValue', name: 'Companies House', value: '10263305' },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '12',
-    bestRating: '5',
-  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
