@@ -20,13 +20,6 @@ type Slide = HeroSlide | JoinedSlide
 
 const slides: Slide[] = [
   {
-    type: 'joined',
-    key: 'new-van-gas-joined',
-    leftSrc: '/van.jpg',
-    rightSrc: '/auntie-gas-image.jpg',
-    alt: 'ARC Electrical & Gas company van beside gas flame services image',
-  },
-  {
     key: 'old-lightbulbs',
     src: '/old-lightbulbs.jpg',
     alt: 'Electrical services — lightbulbs and lighting installation work',
