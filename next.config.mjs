@@ -12,6 +12,8 @@ const nextConfig = {
   // SEO migration: 301 redirects from old site anchor patterns
   async redirects() {
     return [
+      // Non-www → www canonical redirect (preserves full path)
+      { source: '/:path*', has: [{ type: 'host', value: '^arcelectricalandgas\\.co\\.uk$' }], destination: 'https://www.arcelectricalandgas.co.uk/:path*', permanent: true },
       // Old Duda site used hash anchors — redirect common ones to proper pages
       { source: '/', has: [{ type: 'query', key: 'section', value: 'electrical' }], destination: '/electrical-services', permanent: true },
       { source: '/', has: [{ type: 'query', key: 'section', value: 'gas' }], destination: '/gas-services', permanent: true },
