@@ -3,7 +3,7 @@ import LocationPageTemplate from '@/components/LocationPageTemplate'
 
 export const metadata: Metadata = {
   title: 'Electrician in Fairburn | ARC Electrical & Gas',
-  description: 'Looking for an electrician in Fairburn? ARC Electrical & Gas are NAPIT & Part P accredited with 20+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
+  description: 'Looking for an electrician in Fairburn? ARC Electrical & Gas are NAPIT & Part P accredited with 30+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
   alternates: { canonical: '/electrician-fairburn' },
   openGraph: {
     title: 'Electrician in Fairburn | ARC Electrical & Gas',
@@ -21,7 +21,7 @@ export default function ElectricianFairburnPage() {
     <LocationPageTemplate
       town="Fairburn"
       serviceType="electrician"
-      intro="ARC Electrical & Gas are NAPIT approved, Part P accredited electricians covering Fairburn and the nearby area around Castleford. With over 20 years of local experience, we look after homes and businesses throughout the village. Every job is fully insured and certified on completion."
+      intro="ARC Electrical & Gas are NAPIT approved, Part P accredited electricians covering Fairburn and the nearby area around Castleford. With over 30 years of local experience, we look after homes and businesses throughout the village. Every job is fully insured and certified on completion."
       services={[
         'Electrical fault finding and diagnosis',
         'EICR — Electrical Installation Condition Reports',

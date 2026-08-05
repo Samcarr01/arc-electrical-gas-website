@@ -21,7 +21,7 @@ export default function GasEngineerKippaxPage() {
     <LocationPageTemplate
       town="Kippax"
       serviceType="gas-engineer"
-      intro="ARC Electrical & Gas is a Gas Safe registered engineer providing boiler servicing, repairs and installations throughout Kippax and the surrounding LS25 area. Worcester Bosch accredited with over 20 years of experience. All gas work is fully insured and an electronic record is issued on completion."
+      intro="ARC Electrical & Gas is a Gas Safe registered engineer providing boiler servicing, repairs and installations throughout Kippax and the surrounding LS25 area. Worcester Bosch accredited with over 30 years of experience. All gas work is fully insured and an electronic record is issued on completion."
       services={[
         'Annual boiler servicing to manufacturer’s instructions',
         'Boiler fault diagnosis and repair',

@@ -3,7 +3,7 @@ const badges = [
   { label: 'Part P Accredited', sub: 'Building Regulations', icon: '✓', bg: 'bg-green-50', border: 'border-green-200', text: 'text-green-700' },
   { label: 'Gas Safe Registered', sub: 'Reg. No. 584102', icon: '🔥', bg: 'bg-yellow-50', border: 'border-yellow-200', text: 'text-yellow-700' },
   { label: 'Worcester Bosch', sub: 'Accredited Installer', icon: '🏅', bg: 'bg-red-50', border: 'border-red-200', text: 'text-red-700' },
-  { label: '20+ Years Experience', sub: 'Family Run Business', icon: '★', bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-700' },
+  { label: '30+ Years Experience', sub: 'Family Run Business', icon: '★', bg: 'bg-purple-50', border: 'border-purple-200', text: 'text-purple-700' },
   { label: '5.0 ⭐ Google', sub: '12 Reviews', icon: 'G', bg: 'bg-gray-50', border: 'border-gray-200', text: 'text-gray-700' },
 ]
 

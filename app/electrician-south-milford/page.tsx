@@ -3,7 +3,7 @@ import LocationPageTemplate from '@/components/LocationPageTemplate'
 
 export const metadata: Metadata = {
   title: 'Electrician in South Milford | ARC Electrical & Gas',
-  description: 'Looking for an electrician in South Milford? ARC Electrical & Gas are NAPIT & Part P accredited with 20+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
+  description: 'Looking for an electrician in South Milford? ARC Electrical & Gas are NAPIT & Part P accredited with 30+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
   alternates: { canonical: '/electrician-south-milford' },
   openGraph: {
     title: 'Electrician in South Milford | ARC Electrical & Gas',
@@ -21,7 +21,7 @@ export default function ElectricianSouthMilfordPage() {
     <LocationPageTemplate
       town="South Milford"
       serviceType="electrician"
-      intro="ARC Electrical & Gas are NAPIT approved, Part P accredited electricians covering South Milford and the surrounding LS25 area. With over 20 years of experience, we look after homes and businesses in the village between Sherburn in Elmet and Selby. Every job is fully insured and certified on completion."
+      intro="ARC Electrical & Gas are NAPIT approved, Part P accredited electricians covering South Milford and the surrounding LS25 area. With over 30 years of experience, we look after homes and businesses in the village between Sherburn in Elmet and Selby. Every job is fully insured and certified on completion."
       services={[
         'Electrical fault finding and diagnosis',
         'EICR — Electrical Installation Condition Reports',

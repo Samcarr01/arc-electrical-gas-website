@@ -3,16 +3,16 @@ import LocationPageTemplate from '@/components/LocationPageTemplate'
 
 export const metadata: Metadata = {
   title: 'Electrician in Garforth | ARC Electrical & Gas',
-  description: 'Looking for an electrician in Garforth? ARC Electrical & Gas are NAPIT & Part P accredited with 20+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
+  description: 'Looking for an electrician in Garforth? ARC Electrical & Gas are NAPIT & Part P accredited with 30+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
   alternates: { canonical: '/electrician-garforth' },
   openGraph: {
     title: 'Electrician in Garforth | ARC Electrical & Gas',
-    description: 'NAPIT & Part P accredited electrician in Garforth. EICR, fuse boards, sockets, lighting. 20+ years experience. Call 07810 413488.',
+    description: 'NAPIT & Part P accredited electrician in Garforth. EICR, fuse boards, sockets, lighting. 30+ years experience. Call 07810 413488.',
     url: '/electrician-garforth',
   },
   twitter: {
     title: 'Electrician in Garforth | ARC Electrical & Gas',
-    description: 'NAPIT & Part P accredited electrician in Garforth. EICR, fuse boards, sockets, lighting. 20+ years experience. Call 07810 413488.',
+    description: 'NAPIT & Part P accredited electrician in Garforth. EICR, fuse boards, sockets, lighting. 30+ years experience. Call 07810 413488.',
   },
 }
 
@@ -21,7 +21,7 @@ export default function ElectricianGarforthPage() {
     <LocationPageTemplate
       town="Garforth"
       serviceType="electrician"
-      intro="ARC Electrical & Gas provide professional electrical services throughout Garforth and the LS25 area. NAPIT approved and Part P accredited, we handle everything from a tripped fuse to a full consumer unit replacement. Over 20 years serving local homes, landlords and businesses."
+      intro="ARC Electrical & Gas provide professional electrical services throughout Garforth and the LS25 area. NAPIT approved and Part P accredited, we handle everything from a tripped fuse to a full consumer unit replacement. Over 30 years serving local homes, landlords and businesses."
       services={[
         'Electrical fault finding and diagnosis',
         'EICR — Electrical Installation Condition Reports for homes and landlords',

@@ -255,7 +255,7 @@ export default function HomePage() {
                   ['NAPIT Approved & Part P Accredited', 'All electrical work self-certified under Part P of the Building Regulations.'],
                   ['Gas Safe Registered', 'All gas work by Gas Safe registered engineer (Reg. 584102).'],
                   ['Worcester Bosch Accredited', 'Specialist recognised installer for Worcester Bosch boilers.'],
-                  ['Over 20 Years Experience', 'Long track record of quality across the Leeds area.'],
+                  ['Over 30 Years Experience', 'Long track record of quality across the Leeds area.'],
                   ['Fully Insured', 'Complete cover for all electrical and gas installation work.'],
                   ['Genuine Parts Used', 'We only use genuine parts on every job.'],
                 ].map(([t, d]) => (

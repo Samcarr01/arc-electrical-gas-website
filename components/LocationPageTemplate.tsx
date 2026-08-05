@@ -55,7 +55,7 @@ export default function LocationPageTemplate({ town, serviceType, intro, service
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">{label} Services in {town}</h2>
-              <p className="text-gray-600 mb-6">ARC Electrical &amp; Gas cover {town} and the surrounding area. All work is carried out by a fully qualified, insured engineer with over 20 years of experience. A certificate is issued on every job.</p>
+              <p className="text-gray-600 mb-6">ARC Electrical &amp; Gas cover {town} and the surrounding area. All work is carried out by a fully qualified, insured engineer with over 30 years of experience. A certificate is issued on every job.</p>
               <ul className="space-y-3">
                 {services.map(s => (
                   <li key={s} className="flex items-start gap-3">
@@ -68,7 +68,7 @@ export default function LocationPageTemplate({ town, serviceType, intro, service
             <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
               <h3 className="text-xl font-bold text-gray-900 mb-5">Why Choose ARC Electrical &amp; Gas?</h3>
               <div className="space-y-4">
-                {[['NAPIT & Gas Safe Registered','Fully accredited for electrical and gas work.'],['20+ Years Experience','Trusted local family business with a proven record.'],['Certificates on Completion','All work is certified as required by law.'],['Fully Insured','Complete peace of mind on every job.'],['Genuine Parts Only','We only fit genuine, reliable components.'],['5.0 Google Rating','12 five-star reviews from local customers.']]
+                {[['NAPIT & Gas Safe Registered','Fully accredited for electrical and gas work.'],['30+ Years Experience','Trusted local family business with a proven record.'],['Certificates on Completion','All work is certified as required by law.'],['Fully Insured','Complete peace of mind on every job.'],['Genuine Parts Only','We only fit genuine, reliable components.'],['5.0 Google Rating','12 five-star reviews from local customers.']]
                   .map(([t,d]) => (
                     <div key={t} className="flex items-start gap-3">
                       <div className="bg-yellow-100 rounded-lg p-1.5 flex-shrink-0">

@@ -3,7 +3,7 @@ import LocationPageTemplate from '@/components/LocationPageTemplate'
 
 export const metadata: Metadata = {
   title: 'Electrician in Castleford | ARC Electrical & Gas',
-  description: 'Looking for an electrician in Castleford? ARC Electrical & Gas are NAPIT & Part P accredited with 20+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
+  description: 'Looking for an electrician in Castleford? ARC Electrical & Gas are NAPIT & Part P accredited with 30+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
   alternates: { canonical: '/electrician-castleford' },
   openGraph: {
     title: 'Electrician in Castleford | ARC Electrical & Gas',
@@ -21,7 +21,7 @@ export default function ElectricianCastlefordPage() {
     <LocationPageTemplate
       town="Castleford"
       serviceType="electrician"
-      intro="ARC Electrical & Gas provide reliable electrical services across Castleford and the wider WF10 area. We are NAPIT approved and Part P accredited, with over 20 years of experience serving homes and businesses throughout the town. All work is fully insured and certified on completion."
+      intro="ARC Electrical & Gas provide reliable electrical services across Castleford and the wider WF10 area. We are NAPIT approved and Part P accredited, with over 30 years of experience serving homes and businesses throughout the town. All work is fully insured and certified on completion."
       services={[
         'Electrical fault finding and diagnosis',
         'EICR — Electrical Installation Condition Reports',

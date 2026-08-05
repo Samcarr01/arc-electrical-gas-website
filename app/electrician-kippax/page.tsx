@@ -3,16 +3,16 @@ import LocationPageTemplate from '@/components/LocationPageTemplate'
 
 export const metadata: Metadata = {
   title: 'Electrician in Kippax | ARC Electrical & Gas',
-  description: 'Looking for an electrician in Kippax? ARC Electrical & Gas are NAPIT & Part P accredited with 20+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
+  description: 'Looking for an electrician in Kippax? ARC Electrical & Gas are NAPIT & Part P accredited with 30+ years experience. EICR, fuse boards, sockets, lighting and more. Call 07810 413488.',
   alternates: { canonical: '/electrician-kippax' },
   openGraph: {
     title: 'Electrician in Kippax | ARC Electrical & Gas',
-    description: 'NAPIT & Part P accredited electrician in Kippax. EICR, fuse boards, sockets, lighting. 20+ years experience. Call 07810 413488.',
+    description: 'NAPIT & Part P accredited electrician in Kippax. EICR, fuse boards, sockets, lighting. 30+ years experience. Call 07810 413488.',
     url: '/electrician-kippax',
   },
   twitter: {
     title: 'Electrician in Kippax | ARC Electrical & Gas',
-    description: 'NAPIT & Part P accredited electrician in Kippax. EICR, fuse boards, sockets, lighting. 20+ years experience. Call 07810 413488.',
+    description: 'NAPIT & Part P accredited electrician in Kippax. EICR, fuse boards, sockets, lighting. 30+ years experience. Call 07810 413488.',
   },
 }
 
@@ -21,7 +21,7 @@ export default function ElectricianKippaxPage() {
     <LocationPageTemplate
       town="Kippax"
       serviceType="electrician"
-      intro="ARC Electrical & Gas provide professional electrical services throughout Kippax and the surrounding LS25 area. We are NAPIT approved and Part P accredited, with over 20 years of experience serving local homes and businesses. All work is fully insured and certified on completion."
+      intro="ARC Electrical & Gas provide professional electrical services throughout Kippax and the surrounding LS25 area. We are NAPIT approved and Part P accredited, with over 30 years of experience serving local homes and businesses. All work is fully insured and certified on completion."
       services={[
         'Electrical fault finding and diagnosis',
         'EICR — Electrical Installation Condition Reports',

@@ -21,7 +21,7 @@ export default function ElectricianAllertonBywaterPage() {
     <LocationPageTemplate
       town="Allerton Bywater"
       serviceType="electrician"
-      intro="ARC Electrical & Gas provide trusted electrical services in Allerton Bywater and the surrounding area. A family-run business with over 20 years of experience, NAPIT approved and Part P accredited. We are fully insured and issue certificates on completion of all work."
+      intro="ARC Electrical & Gas provide trusted electrical services in Allerton Bywater and the surrounding area. A family-run business with over 30 years of experience, NAPIT approved and Part P accredited. We are fully insured and issue certificates on completion of all work."
       services={[
         'Electrical fault finding and diagnosis',
         'EICR — Electrical Installation Condition Reports',
