@@ -17,6 +17,8 @@ const nextConfig = {
       // Old Duda site used hash anchors — redirect common ones to proper pages
       { source: '/', has: [{ type: 'query', key: 'section', value: 'electrical' }], destination: '/electrical-services', permanent: true },
       { source: '/', has: [{ type: 'query', key: 'section', value: 'gas' }], destination: '/gas-services', permanent: true },
+      // Legacy /home route → homepage
+      { source: '/home', destination: '/', permanent: true },
     ]
   },
 }
