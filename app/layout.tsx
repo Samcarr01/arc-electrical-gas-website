@@ -48,12 +48,6 @@ const schema = {
     opens: '08:00',
     closes: '17:00',
   }],
-  hasCredential: [
-    { '@type': 'EducationalOccupationalCredential', name: 'NAPIT Approved Domestic & Commercial Installer' },
-    { '@type': 'EducationalOccupationalCredential', name: 'Part P Accredited' },
-    { '@type': 'EducationalOccupationalCredential', name: 'Gas Safe Registered (584102)' },
-    { '@type': 'EducationalOccupationalCredential', name: 'Worcester Bosch Accredited Installer' },
-  ],
   identifier: { '@type': 'PropertyValue', name: 'Companies House', value: '10263305' },
 }
 
